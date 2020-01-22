@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Cucumber_Selenium.Cucumber_Selenium.testrunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 141.322 sec <<< FAILURE!
+Selecting an energy type navigates user to the supplier info page(Energy Type)  Time elapsed: 68.101 sec  <<< FAILURE!
+java.lang.AssertionError: The page heading does not match - expected page heading Whos your current supplier? actual page heading was Who's your current supplier?
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_page_heading(LoginStep.java:1238)
+	at ?.user validates the page heading "Whos your current supplier?"(src/test/java/features/EnergyType.feature:14)
+

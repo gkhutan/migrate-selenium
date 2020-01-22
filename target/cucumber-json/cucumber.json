@@ -1,0 +1,102 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-01-21T13:39:45.731Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6729515800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStep.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Login as a authenticated user",
+        "description": "",
+        "id": "login-feature;login-as-a-authenticated-user",
+        "after": [
+          {
+            "output": [
+              "Finished Scenario"
+            ],
+            "result": {
+              "duration": 4820165700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStep.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12614569200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is  on homepage",
+            "match": {
+              "location": "Test.user_is_on_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1722676400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigates to Login Page",
+            "match": {
+              "location": "Test.user_navigates_to_Login_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1626094600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters username and Password",
+            "match": {
+              "location": "Test.user_enters_username_and_Password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6178991500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "success message is displayed",
+            "match": {
+              "location": "Test.success_message_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Login Feature",
+    "description": "",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/test.feature",
+    "tags": []
+  }
+]
