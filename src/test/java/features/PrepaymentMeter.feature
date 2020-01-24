@@ -25,7 +25,7 @@ Feature: Prepayment Meter
     And user validates the page heading two "Your switch is helping raise money for people who need it"
     And the "direct debit" field is "not displayed"
 
-  @ready
+  @ready @smoketest
   Scenario: If user selects prepayment meter and non-prepayment meter as the payment method then validation message should appear
     And user selects the "same supplier no" radio button
     And user selects a supplier and tariff and payment method

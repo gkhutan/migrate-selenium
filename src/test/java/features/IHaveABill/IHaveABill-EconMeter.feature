@@ -53,7 +53,7 @@ Feature: Economy 7 meter - I have a bill
       | Energy Type | Econ meter     | Prepayment button          | ElecDayUsage     | DayUsage | ElecNightUsage     | NightUsage |
       | Electric    | econ meter yes | That's ok - let's continue | Electric day kwh |     2000 | Electric night kwh |       4000 |
 
-  @ready
+  @ready @smoketest
   Scenario Outline: Economy 7 meter user can successfully sign up and view and edit their details on the Dashboard - Dual
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "<Energy Type>"
@@ -81,10 +81,13 @@ Feature: Economy 7 meter - I have a bill
     And user selects the "Sign up" button
     And user has selected confirm in the congrats popup
     Given user selects the "Edit Usage" button
-    And user enters their "<ElecDayUsage>" usage numbers "<DayUsage2>"
-    And user enters their "<ElecNightUsage>" usage numbers "<NightUsage2>"
-    And user enters their "<GasUsageField>" usage numbers "<GasUsage2>"
+    And user enters their "<ElecDayUsage>" usage numbers manually "<DayUsage2>"
+    And user enters their "<ElecNightUsage>" usage numbers manually "<NightUsage2>"
+    And user enters their "<GasUsageField>" usage numbers manually "<GasUsage2>"
     And user selects the "Save usage" button
+    And user validates their "<ElecDayUsage>" usage number "3333 kWh"
+    And user validates their "<ElecNightUsage>" usage number "5555 kWh"
+    And user validates their "<GasUsageField>" usage number "7000 kWh"
     And user selects the "Edit preferences" button
     And user edits their preferences on the dashboard
       | switch preference             | ratings  | whd           |
@@ -104,5 +107,5 @@ Feature: Economy 7 meter - I have a bill
     And user validates the home page heading
 
     Examples: 
-      | Energy Type | Econ meter     | ElecDayUsage     | DayUsage | DayUsage2          | ElecNightUsage | NightUsage | NightUsage2 | GasUsageField | GasUsage2 |
-      | Dual        | econ meter yes | Electric day kwh |     2000 | Electric night kwh |           4000 |       4333 | Gas kwh     |          3000 |      6353 |
+      | Energy Type | Econ meter     | ElecDayUsage     | DayUsage | DayUsage2 | ElecNightUsage     | NightUsage | NightUsage2 | GasUsageField | GasUsage | GasUsage2 |
+      | Dual        | econ meter yes | Electric day kwh |     2000 |      3333 | Electric night kwh |       4000 |        5555 | Gas kwh       |     6000 |      7000 |

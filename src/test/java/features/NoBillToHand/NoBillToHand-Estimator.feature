@@ -3,7 +3,7 @@ Feature: Estimator - No bill to hand
   Background: 
     Given I am a new user type with known postcode "Welcome!","BN126HU","No bill to hand","Let's go"
 
-  @ready
+  @ready 
   Scenario: Route info message should mention No bill to hand
     Given user has selected an energy type "Gas & Electric"
     When user selects a top six supplier "ScottishPower" icon
@@ -16,7 +16,7 @@ Feature: Estimator - No bill to hand
     Then user selects the "Usage" button
     Then user sees the route info message "As you don’t have a bill to hand, we’ve assumed you’re on your supplier’s standard tariff/s to present your savings. We estimated your usage with our usage calculator."
 
-  @ready
+  @ready 
   Scenario: Selecting the estimator with Econ 7 values should display the additional heating field
     Given user has selected an energy type "Gas & Electric"
     When user selects a top six supplier "sse" icon
@@ -37,7 +37,7 @@ Feature: Estimator - No bill to hand
       | 5 People          | Normal user (family house) | Well-wrapped average home |
     Then user selects the "Usage" button
 
-  @ready
+  @ready 
   Scenario: Toggling between estimator and I know my numbers should remember the selection for the econ 7 meter
     And user has selected an energy type "Gas & Electric"
     When user selects a top six supplier "ScottishPower" icon

@@ -1,7 +1,5 @@
 Feature: Estimator
 
-  Background: 
-
   @ready
   Scenario: Selecting the estimator values should display the fields as selected
     Given I am a new user type with known postcode "Welcome!","BN126HU","No bill to hand","Let's go"
@@ -36,7 +34,7 @@ Feature: Estimator
     And user confirms the radio is selected "econ meter no"
     And user selects the "Continue" button
     And user enters their "Gas kWh" usage numbers "2000"
-    And user enters their "Electric kWh" usage numbers "2000"
+    And user enters their "Electric kWh" usage numbers "3000"
     When user selects the "Help me estimate" button
     And user selects top nav icon "supplier"
     And user selects the "econ meter yes" radio button
@@ -47,8 +45,8 @@ Feature: Estimator
     When user selects a top six supplier "npower" icon
     And user confirms the radio is selected "econ meter yes"
     And user selects the "Continue" button
-    And user enters their "Electric day kWh" usage numbers "2000"
-    And user enters their "Electric night kWh" usage numbers "3000"
+    And user enters their "Electric day kWh" usage numbers "4000"
+    And user enters their "Electric night kWh" usage numbers "5000"
     Then user selects the "Usage" button
     And user validates the page heading "Choose your first switch"
 

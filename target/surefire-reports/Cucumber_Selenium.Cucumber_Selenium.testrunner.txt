@@ -1,10 +1,341 @@
 -------------------------------------------------------------------------------
 Test set: Cucumber_Selenium.Cucumber_Selenium.testrunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 141.322 sec <<< FAILURE!
-Selecting an energy type navigates user to the supplier info page(Energy Type)  Time elapsed: 68.101 sec  <<< FAILURE!
-java.lang.AssertionError: The page heading does not match - expected page heading Whos your current supplier? actual page heading was Who's your current supplier?
+Tests run: 208, Failures: 38, Errors: 4, Skipped: 0, Time elapsed: 20,780.137 sec <<< FAILURE!
+User switching now and incurring an exit fee and viewing switch now dashboard / user switching later and seeing delayed dashboard(Delayed switch)  Time elapsed: 190.165 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...rats text should be []> but was:<...rats text should be [So what now?]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at seleniumgluecode.LoginStep.validates_the_text_in_the_congrats_popup(LoginStep.java:4321)
+	at ?.validates the text in the "delayed" congrats popup ""(src/test/java/features/IHaveABill/DelayedSwitch.feature:44)
+
+Selecing the header links on contact us displays corressponding page(Contact us)  Time elapsed: 15.968 sec  <<< FAILURE!
+java.lang.AssertionError: what is migrate? link is currently not recognised
 	at org.junit.Assert.fail(Assert.java:89)
-	at seleniumgluecode.LoginStep.user_validates_the_page_heading(LoginStep.java:1238)
-	at ?.user validates the page heading "Whos your current supplier?"(src/test/java/features/EnergyType.feature:14)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ?.user selects the "What is Migrate?" link(src/test/java/features/Marketing/ContactUs.feature:6)
+
+Selecing the header links on contact us displays corressponding page(Contact us)  Time elapsed: 16.645 sec  <<< FAILURE!
+java.lang.AssertionError: faqs link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ?.user selects the "FAQS" link(src/test/java/features/Marketing/ContactUs.feature:6)
+
+Selecing the header links on contact us displays corressponding page(Contact us)  Time elapsed: 25.301 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class='navigation__right-inner']//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'LAPTOP-0ORCG1QR', ip: '192.168.13.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 12196, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1409c6d8-8512-433d-9757-3d4aded26b24
+*** Element info: {Using=xpath, value=.//nav//div[@class='navigation__right-inner']//following-sibling::li[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:813)
+	at ?.user selects the "Sign Up" link(src/test/java/features/Marketing/ContactUs.feature:6)
+
+Selecing the header links on contact us displays corressponding page(Contact us)  Time elapsed: 25.591 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class='navigation__right-inner']//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'LAPTOP-0ORCG1QR', ip: '192.168.13.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 4432, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9b4b2f55-fafc-45f5-bbc2-3686ce644f82
+*** Element info: {Using=xpath, value=.//nav//div[@class='navigation__right-inner']//following-sibling::li[4]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:818)
+	at ?.user selects the "Login" link(src/test/java/features/Marketing/ContactUs.feature:6)
+
+User validates the footer links on the home page(Footer - Marketing pages)  Time elapsed: 18.177 sec  <<< FAILURE!
+java.lang.AssertionError: what is migrate? footer has not been recognised.
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_should_see_the_header_with_the_following_items(LoginStep.java:2013)
+	at ?.user should see the footer with the following items(src/test/java/features/Marketing/Footer.feature:6)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 27.716 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 27.148 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 27.838 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 25.998 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 26.047 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 27.306 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 27.051 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:19)
+
+Selecting the social media footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 25.799 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:36)
+
+Selecting the social media footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 25.962 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:36)
+
+Selecting the social media footer links displays the corressponding page(Footer - Marketing pages)  Time elapsed: 25.063 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Footer.feature:36)
+
+User sees the header items(Header - Marketing pages)  Time elapsed: 16.829 sec  <<< FAILURE!
+java.lang.AssertionError: what is migrate? has not been recognised.
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_should_see_the_header_with_the_following_items(LoginStep.java:2013)
+	at ?.user should see the header with the following items(src/test/java/features/Marketing/Header.feature:6)
+
+Selecting the header links displays corressponding page(Header - Marketing pages)  Time elapsed: 14.14 sec  <<< FAILURE!
+java.lang.AssertionError: what is migrate? link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ?.user selects the "What is Migrate?" link(src/test/java/features/Marketing/Header.feature:16)
+
+Selecting the header links displays corressponding page(Header - Marketing pages)  Time elapsed: 16.278 sec  <<< FAILURE!
+java.lang.AssertionError: faqs link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ?.user selects the "FAQS" link(src/test/java/features/Marketing/Header.feature:16)
+
+Selecting the header links displays corressponding page(Header - Marketing pages)  Time elapsed: 24.898 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class='navigation__right-inner']//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'LAPTOP-0ORCG1QR', ip: '192.168.13.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 8940, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1ebf6dd9-ab57-4af0-add4-59f6e40c3d1c
+*** Element info: {Using=xpath, value=.//nav//div[@class='navigation__right-inner']//following-sibling::li[3]}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:813)
+	at ?.user selects the "Sign Up" link(src/test/java/features/Marketing/Header.feature:16)
+
+Selecting the header links displays corressponding page(Header - Marketing pages)  Time elapsed: 23.226 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class='navigation__right-inner']//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'LAPTOP-0ORCG1QR', ip: '192.168.13.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10072, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f265151e-5839-47e4-93a6-d38ffd7a6ee9
+*** Element info: {Using=xpath, value=.//nav//div[@class='navigation__right-inner']//following-sibling::li[4]}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:818)
+	at ?.user selects the "Login" link(src/test/java/features/Marketing/Header.feature:16)
+
+Selecing the links on the home page displays corressponding page(Home - Marketing page)  Time elapsed: 26.542 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Home.feature:6)
+
+Selecing the links on the home page displays corressponding page(Home - Marketing page)  Time elapsed: 26.013 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Home.feature:6)
+
+Selecing the links on the home page displays corressponding page(Home - Marketing page)  Time elapsed: 26.105 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "cookie OK" button(src/test/java/features/Marketing/Home.feature:6)
+
+Economy 7 meter user can successfully sign up and view and edit their details on the Dashboard - Dual(Economy 7 meter - No bill to hand)  Time elapsed: 118.053 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button usage
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "Usage" button(src/test/java/features/NoBillToHand/NoBillToHand-EconMeter.feature:75)
+
+Prepayment user can edit their econ meter usage details, Preferences and Personal details and select the link for Prepayment meter(Dashboard - Recently Moved In)  Time elapsed: 29.204 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button login
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at seleniumgluecode.LoginStep.user_logs_in_as_a_user(LoginStep.java:1078)
+	at ?.user logs in as a "registered" user "elec econ","TestUser1","Login"(src/test/java/features/RecentlyMovedIn/MovedIn-Dashboard.feature:56)
+
+Selecting the supplier options updates the lozenge, metadata on the page accordingly(Results - Recently moved in)  Time elapsed: 109.965 sec  <<< FAILURE!
+java.lang.AssertionError: The option was not selected for paper billing
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_confirms_the_radio_is_selected(LoginStep.java:3776)
+	at ?.user confirms the radio is selected "Paper Billing"(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:14)
+
+Selecting the supplier options updates the lozenge, metadata on the page accordingly(Results - Recently moved in)  Time elapsed: 109.121 sec  <<< FAILURE!
+java.lang.AssertionError: An error occured with validating the metadata for WHD
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_metadata_field(LoginStep.java:3802)
+	at ?.user validates the metadata field "WHD"(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:15)
+
+Selecting the supplier options updates the lozenge, metadata on the page accordingly(Results - Recently moved in)  Time elapsed: 109.233 sec  <<< FAILURE!
+java.lang.AssertionError: An error occured with validating the metadata for Top rated
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_metadata_field(LoginStep.java:3802)
+	at ?.user validates the metadata field "Top rated"(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:15)
+
+User can successfully sign up with a Prepayment meter - separate gas and electric suppliers(Prepayment Meter - I have a bill to hand)  Time elapsed: 60.516 sec  <<< FAILURE!
+java.lang.AssertionError: 
+The same supplier no button has not been recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:490)
+	at ?.user selects the "same supplier no" button(src/test/java/features/SameSupplier.feature:10)
+
+Selecting My Payment Method is not shown option will display the Missing payment Type prompt(Supplier Info - No bill to hand)  Time elapsed: 67.926 sec  <<< FAILURE!
+java.lang.AssertionError: Cannot see the prompt missing payment type
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_sees_the_prompt(LoginStep.java:3708)
+	at ?.user sees the "Missing Payment Type" prompt(src/test/java/features/SuppierInfoNoBill.feature:14)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier(Supplier Info)  Time elapsed: 76.471 sec  <<< FAILURE!
+java.lang.AssertionError: An error occured with selecting a top six supplier energy type is edf energy
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ?.user selects a top six supplier "EDF Energy" icon(src/test/java/features/SupplierInfo.feature:38)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier(Supplier Info)  Time elapsed: 95.907 sec  <<< FAILURE!
+java.lang.AssertionError: An error occured with selecting a top six supplier energy type is british gas
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ?.user selects a top six supplier "British Gas" icon(src/test/java/features/SupplierInfo.feature:47)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 69.475 sec  <<< FAILURE!
+org.junit.ComparisonFailure: elec supplier expected:<[npower]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ?.the supplier dropdown "elec supplier" displays value "npower"(src/test/java/features/SupplierInfo.feature:67)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 70.962 sec  <<< FAILURE!
+org.junit.ComparisonFailure: elec supplier expected:<[E.ON]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ?.the supplier dropdown "elec supplier" displays value "E.ON"(src/test/java/features/SupplierInfo.feature:67)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 70.576 sec  <<< FAILURE!
+org.junit.ComparisonFailure: elec supplier expected:<[ScottishPower]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ?.the supplier dropdown "elec supplier" displays value "ScottishPower"(src/test/java/features/SupplierInfo.feature:67)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 75.541 sec  <<< FAILURE!
+java.lang.AssertionError: An error occured with selecting a top six supplier energy type is edf energy
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ?.user selects a top six supplier "EDF Energy" icon(src/test/java/features/SupplierInfo.feature:65)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 71.736 sec  <<< FAILURE!
+org.junit.ComparisonFailure: elec supplier expected:<[SSE]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ?.the supplier dropdown "elec supplier" displays value "SSE"(src/test/java/features/SupplierInfo.feature:67)
+
+Selecting the top six suppliers displays the value in the supplier dropdown field - Electric(Supplier Info)  Time elapsed: 68.471 sec  <<< FAILURE!
+org.junit.ComparisonFailure: elec supplier expected:<[British Gas]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ?.the supplier dropdown "elec supplier" displays value "British Gas"(src/test/java/features/SupplierInfo.feature:67)
+
+Entering usage numbers kWh for dual and Economy meter usage fields successfully - kWh & Spend(Usage info)  Time elapsed: 85.339 sec  <<< FAILURE!
+java.lang.AssertionError: Error - error validating page text What's your current usage?
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_page_text(LoginStep.java:2430)
+	at ?.user validates the page text "What's your current usage?"(src/test/java/features/Usage.feature:47)
+
+Entering usage numbers for Electric and Economy meter usage fields successfully - kWh & Spend(Usage info)  Time elapsed: 85.89 sec  <<< FAILURE!
+java.lang.AssertionError: Error - error validating page text What's your current usage?
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_page_text(LoginStep.java:2430)
+	at ?.user validates the page text "What's your current usage?"(src/test/java/features/Usage.feature:72)
+
+Entering incorrect usage numbes displays validation messages -  elec kWh(Usage info)  Time elapsed: 95.995 sec  <<< FAILURE!
+java.lang.AssertionError: There has been an error selecting this button inactive continue
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ?.user selects the "Inactive continue" button(src/test/java/features/Usage.feature:95)
 

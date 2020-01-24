@@ -90,7 +90,7 @@ Feature: Register - I have a bill to hand
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario: I have a bill user with unknown postcode EE00EE completing sign up with extra fields and viewing dashboard - Electric only
     Given I am a new user type with unknown postcode "Welcome!","ee00ee","I have a bill to hand","London","Let's go"
     And user has selected an energy type "Electric"
@@ -135,7 +135,7 @@ Feature: Register - I have a bill to hand
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario: I have a bill user with postcode BN12 6HU completing sign up with extra fields values and viewing dashboard  - Electric only
     Given I am a new user type with known postcode "Welcome!","BN12 6HU","I have a bill to hand","Let's go"
     And user has selected an energy type "Electric"
@@ -247,7 +247,7 @@ Feature: Register - I have a bill to hand
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario Outline: User should not be able to submit the form if account holder name is less than 4 or more than 18 characters
     Given I am a new user type with known postcode "Welcome!","BN12 6HU","I have a bill to hand","Let's go"
     And user has selected an energy type "Electric"
@@ -279,3 +279,104 @@ Feature: Register - I have a bill to hand
       | Tes                     | Account names must be between 4 and 18 characters long | Inactive Sign up | signup/register |
       | Testuser account holder | Account names must be between 4 and 18 characters long | Inactive Sign up | signup/register |
       | Test user               | None                                                   | Sign up          | dashboard       |
+
+ @ready @smoketest 
+  Scenario: User who has a known postcode can toggle the link to enter their address manually and successfully sign up
+    Given I am a new user type with known postcode "Welcome!","OX43UJ","I have a bill to hand","Let's go"
+    And user has selected an energy type "Dual"
+    And user has selected their default energy supplier information
+    And user has entered their usage numbers "Electric kWh","330","Gas kWh","220"
+    And user selects the "Continue" button
+    And when user creates an account
+    And user is on the register page
+    And they enter a dob "1903 1980"
+    And user selects the lived for three years field to "no"
+    And user selects the supply address same as billing address field to "no"
+    Then user selects the "enter your address manually" link
+    And user enters their details to register
+      | form fields                      | value                                                       |
+      | title                            | Mr                                                          |
+      | firstname                        | Gurdeep                                                     |
+      | lastname                         | Test                                                        |
+      | Phone number                     |                                                 01903242773 |
+      | house no                         | 20a                                                         |
+      | first line of address            | Preston Road, Littlemore                                    |
+      | employment status                | Self Employed                                               |
+      | residential status               | Landlord                                                    |
+      | account name                     | Test Account Name                                           |
+      | account number                   |                                                    55779911 |
+      | sort code                        |                                                      200000 |
+      | time at current address          |                                                           2 |
+      | previous address postcode        | ub100qq                                                     |
+      | select second address            | 2, Towers Avenue, Hillingdon, UXBRIDGE, Middlesex, UB10 0QQ |
+      | time at previous address         |                                                           2 |
+      | second previous address postcode | ox43uj                                                      |
+      | select third address             | 1, Newman Road, OXFORD, Oxfordshire, OX4 3UJ                |
+      | billing address postcode         | ox37sh                                                      |
+      | select billing address           | 1, East Field Close, OXFORD, Oxfordshire, OX3 7SH           |
+      | electric meter number            |                                               1013092420412 |
+      | gas meter number                 |                                                  8822948210 |
+    And user selects the "t&cs" radio button
+    And user selects the "Sign up" button
+    And user selects the "Look at your migration" button
+    And user validates the "dashboard" URL
+
+
+  #@ready @smoketest
+  #Scenario: User who has a known postcode can enter their address manually and successfully sign up
+    #Given user logs in as a "reg" user "gurdeep23115138@migrate.co.uk","TestUser1","Login"
+    #Given I am a new user type with known postcode "Welcome!","OX43UJ","I have a bill to hand","Let's go"
+    #And user has selected an energy type "Dual"
+    #And user has selected their default energy supplier information
+    #And user has entered their usage numbers "Electric kWh","330","Gas kWh","220"
+    #And user selects the "Continue" button
+    #And when user creates an account
+    #And user is on the register page
+    #And they enter a dob "1903 80"
+    #And user selects the lived for three years field to "no"
+    #And user selects the supply address same as billing address field to "no"
+    #Then user selects the "enter your address manually" link
+    #And user enters their details to register
+      #| form fields                      | value                                                       |
+      #| title                            | Mr                                                          |
+      #| firstname                        | Gurdeep                                                     |
+      #| lastname                         | Test                                                        |
+      #| Phone number                     |                                                 01903242773 |
+      #| house no                         | 20a                                                         |
+      #| first line of address            | Preston Road, Littlemore                                    |
+      #| employment status                | Self Employed                                               |
+      #| residential status               | Landlord                                                    |
+      #| account name                     | Test Account Name                                           |
+      #| account number                   |                                                    55779911 |
+      #| sort code                        |                                                      200000 |
+      #| time at current address          |                                                           2 |
+      #| previous address postcode        | ub100qq                                                     |
+      #| select second address            | 2, Towers Avenue, Hillingdon, UXBRIDGE, Middlesex, UB10 0QQ |
+      #| time at previous address         |                                                           2 |
+      #| second previous address postcode | ox43uj                                                      |
+      #| select third address             | 1, Newman Road, OXFORD, Oxfordshire, OX4 3UJ                |
+      #| billing address postcode         | ox37sh                                                      |
+      #| select billing address           | 1, East Field Close, OXFORD, Oxfordshire, OX3 7SH           |
+      #| electric meter number            |                                               1013092420412 |
+      #| gas meter number                 |                                                  8822948210 |
+    #Then user selects the "edit second address" button
+    #Then user selects the "enter your second address manually" link
+    #Then user selects the "edit third address" button
+    #Then user selects the "enter your third address manually" link
+    #Then user selects the "edit billing address" button
+    #Then user selects the "enter your billing address manually" link
+      #And user enters their details to register
+      #| form fields                      | value         |
+      #| previous address postcode        | ee00ee        |
+      #| previous house no                | 20a           |
+      #| second address line1             | Preson Road   |
+      #| second previous address postcode | ee00ee        |
+      #| third house no                   | 54 Chandlings |
+      #| third address line1              | Brighton Road |
+      #| billing address postcode         | ee00ee        |
+      #| billing house no                 | 65A           |
+      #| billing address line1            | Worthing lane |
+    #And user selects the "t&cs" radio button
+    #And user selects the "Sign up" button
+    #And user selects the "Look at your migration" button
+    #And user validates the "dashboard" URL

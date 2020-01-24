@@ -20,7 +20,7 @@ Feature: Create an account
     Examples: 
       | email                 | password  | page text                 | button            |
       | gurdeep@migrate.co.uk | TestUser1 | Migrate and do good       | Let's go          |
-      | gurdeep@migrate.co.uk | TestUser2 | Let’s make you an account | Inactive continue |
+      | gurdeep@migrate.co.uk | TestUser2 | Let's make you an account | Inactive continue |
 
   @ready
   Scenario: Entering in incorrect email and password displays validation messages

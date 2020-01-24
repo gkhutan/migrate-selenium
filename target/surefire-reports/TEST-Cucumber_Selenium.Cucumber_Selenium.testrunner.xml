@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="Cucumber_Selenium.Cucumber_Selenium.testrunner" time="140.425" errors="0" skipped="0">
+<testsuite tests="208" failures="38" name="Cucumber_Selenium.Cucumber_Selenium.testrunner" time="20,777.249" errors="4" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -30,7 +30,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\work\Migrate\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_211;C:\Program Files\selenium\selenium-executables\;C:\Program Files\selenium\;C:\Program Files\selenium\drivers;C:\work\Migrate\apache-maven-3.6.3\bin\;C:\Users\ladyg\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_211;C:\Program Files\selenium\selenium-executables\;C:\Program Files\selenium\;C:\Program Files\selenium\drivers;C:\work\Migrate\apache-maven-3.6.3\bin\;C:\Program Files\Git\cmd;C:\Users\ladyg\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="maven.conf" value="C:\work\Migrate\apache-maven-3.6.3\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -66,35 +66,97 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Energy Type" name="Selecting an energy type navigates user to the supplier info page" time="72.324"/>
-  <testcase classname="Energy Type" name="Selecting an energy type navigates user to the supplier info page" time="68.101">
-    <failure message="The page heading does not match - expected page heading Whos your current supplier? actual page heading was Who&apos;s your current supplier?" type="java.lang.AssertionError">java.lang.AssertionError: The page heading does not match - expected page heading Whos your current supplier? actual page heading was Who&apos;s your current supplier?
-	at org.junit.Assert.fail(Assert.java:89)
-	at seleniumgluecode.LoginStep.user_validates_the_page_heading(LoginStep.java:1238)
-	at ✽.user validates the page heading &quot;Whos your current supplier?&quot;(src/test/java/features/EnergyType.feature:14)
+  <testcase classname="AWIN Sign up" name="AWIN user can successfully sign up" time="213.541"/>
+  <testcase classname="Create an account" name="Creating an account successfully takes the user to the register page" time="130.22"/>
+  <testcase classname="Create an account" name="Creating an account successfully takes the user to the register page" time="101.56"/>
+  <testcase classname="Create an account" name="Entering in incorrect email and password displays validation messages" time="101.721"/>
+  <testcase classname="Dashboard" name="User can edit their Econ meter, Usage details, Preferences and Personal details" time="108.376"/>
+  <testcase classname="Dashboard" name="The user&apos;s address is displayed on the dashboard" time="44.114"/>
+  <testcase classname="Dashboard" name="The user&apos;s address is displayed on the dashboard" time="44.113"/>
+  <testcase classname="Dashboard" name="Entering usage numbers and personal details incorrecly displays validation messages - dual, econ 7" time="93.982"/>
+  <testcase classname="Dashboard" name="Editing usage numbers and personal details incorrecly displays validation messages - elec" time="86.153"/>
+  <testcase classname="Dashboard" name="The correct tariff name and savings are displayed on the dashboard" time="40.596"/>
+  <testcase classname="Dashboard" name="Selecting the social media icons navigates user to the correct social media page" time="71.523"/>
+  <testcase classname="Dashboard" name="User can navigate back to the dashboard successfully" time="47.227"/>
+  <testcase classname="Dashboard" name="Editing bank account numbers incorrecly displays validation messages" time="62.084"/>
+  <testcase classname="Dashboard" name="Editing bank account numbers successfully" time="59.559"/>
+  <testcase classname="Economy 7 Meter" name="Entering incorrect usage numbes for kWh displays validation messages - dual kWh" time="128.095"/>
+  <testcase classname="Economy 7 Meter" name="Entering incorrect usage numbes for spend displays validation messages - dual spend" time="124.168"/>
+  <testcase classname="Energy Type" name="Selecting an energy type navigates user to the supplier info page" time="64.934"/>
+  <testcase classname="Energy Type" name="Selecting an energy type navigates user to the supplier info page" time="63.573"/>
+  <testcase classname="Estimator" name="Selecting the estimator values should display the fields as selected" time="106.901"/>
+  <testcase classname="Estimator" name="Selecting the estimator with Econ 7 values should display the additional heating field" time="110.663"/>
+  <testcase classname="Estimator" name="Toggling between estimator and I know my numbers should remember the selection for the econ meter" time="128.851"/>
+  <testcase classname="Estimator" name="Selecting the estimator should keep user in I don&apos;t have a bill mode on the results page" time="98.643"/>
+  <testcase classname="Finish your sign up" name="A returning user is navigated to the previous page they visited and can log out successfully" time="61.093"/>
+  <testcase classname="Finish your sign up" name="A returning user is navigated to the previous page they visited and can log out successfully" time="57.849"/>
+  <testcase classname="Finish your sign up" name="A returning user is navigated to the previous page they visited and can log out successfully" time="59.989"/>
+  <testcase classname="Finish your sign up" name="A returning user is navigated to the previous page they visited and can log out successfully" time="57.572"/>
+  <testcase classname="Finish your sign up" name="Selecting the Finish your sign up button takes the returning user to the previous page they visited" time="82.43"/>
+  <testcase classname="Finish your sign up" name="Selecting the Finish your sign up button takes the new user to the previous page they visited" time="137.001"/>
+  <testcase classname="Delayed switch" name="User switching now and incurring an exit fee and viewing switch now dashboard / user switching later and seeing delayed dashboard" time="200.989"/>
+  <testcase classname="Delayed switch" name="User switching now and incurring an exit fee and viewing switch now dashboard / user switching later and seeing delayed dashboard" time="190.165">
+    <failure message="expected:&lt;...rats text should be []&gt; but was:&lt;...rats text should be [So what now?]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;...rats text should be []&gt; but was:&lt;...rats text should be [So what now?]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at seleniumgluecode.LoginStep.validates_the_text_in_the_congrats_popup(LoginStep.java:4321)
+	at ✽.validates the text in the &quot;delayed&quot; congrats popup &quot;&quot;(src/test/java/features/IHaveABill/DelayedSwitch.feature:44)
 </failure>
     <system-out>Selects the button name cookie ok
 Actual page heading h1 is Welcome! and expected page heading is Welcome!
-Entering postcode BN126HU
+Entering postcode bn126hu
 Selects the button name let&apos;s go
-.selecting top nav icon energy
-.Actual page heading h1 is What type of energy does your home use? and expected page heading is What type of energy does your home use?
-.User has selected energy type electric
-.Selects the button name continue
-.FFinished Scenariotrue
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Actual page heading h1 is Who&apos;s your current supplier? and expected page heading is Who&apos;s your current supplier?
+Actual value displayed in supplier field is 1 Year Fixed v16 and the energy type is dual tariff
+Actual value displayed in supplier field is Pay On Receipt Of Bill and the energy type is dual payment
+Selects the button name continue
+User has entered usage number 1699
+User has entered usage number 1327
+User has entered usage number 1327
+Selects the button name usage
+Selects the button name continue
+User can see the prompt delayed
+Selects the button name close prompt
+Selects the button name continue
+Selects the button name switch later
+Selects the button name submit
+User validates the URL signup/create-account
+Emails is gurdeep23174955@migrate.co.uk
+Selects the button name let&apos;s go
+Actual header two is Your switch is helping raise money for people who need it Expected is Your switch is helping raise money for people who need it
+Entered title Mr
+Entered firstname Gurdeep
+Entered lastname Test
+Entered phone number 01903242773
+Selected address status 4, Melville Way, Goring-by-sea, WORTHING, West Sussex, BN12 6HU
+Selected employment status Self Employed
+Selected res status Landlord
+Entered account name Test Account Name
+Entered account number 55779911
+Entered sortcode 200000
+Selects the button name t&amp;cs
+Selects the button name sign up
+User validates the URL dashboard
+Actual header two is Congratulations Gurdeep! Expected is Congratulations Gurdeep!
+true
 </system-out>
-    <system-err>1579700131829	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.RkB7h258gzm6&quot;
-1579700132481	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
-1579700132577	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
-1579700132577	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
-1579700132577	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
-1579700132577	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+    <system-err>1579801665771	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.lp5Tg9SOEjPj&quot;
+1579801666319	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579801666420	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579801666421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579801666421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579801666421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
-1579700135000	Marionette	INFO	Listening on port 65289
-1579700135025	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jan 22, 2020 1:35:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1579801669023	Marionette	INFO	Listening on port 64055
+1579801670218	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 5:47:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1579700196620	Marionette	INFO	Stopped listening on port 65289
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579801853006	Marionette	INFO	Stopped listening on port 64055
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
@@ -103,4 +165,1653 @@ INFO: Detected dialect: W3C
 
 </system-err>
   </testcase>
+  <testcase classname="Delayed switch" name="DOB validation checks for a Delayed and Switch now user on the Register page" time="226.781"/>
+  <testcase classname="Delayed switch" name="DOB validation checks for a Delayed and Switch now user on the Register page" time="226.164"/>
+  <testcase classname="Dashboard - I have a bill" name="The correct tariff, Preferences, Personal details, address are shown on the dashboard" time="205.769"/>
+  <testcase classname="Dashboard - I have a bill" name="Toggling the address link to enter address manually displays correct address on dashboard" time="184.352"/>
+  <testcase classname="Dashboard - I have a bill" name="Toggling the address link to select an address from the list displays correct address on dashboard" time="187.88"/>
+  <testcase classname="Dashboard - I have a bill" name="User can edit their econ meter usage details, Preferences and Personal details and select the link for Prepayment meter" time="107.385"/>
+  <testcase classname="Economy 7 meter - I have a bill" name="Economy 7 meter and Prepayment meter user can successfully Sign up and view and edit their details on the Dashboard - Prepayment, Econ 7 &amp; Electric" time="227.413"/>
+  <testcase classname="Economy 7 meter - I have a bill" name="Economy 7 meter user can successfully sign up and view and edit their details on the Dashboard - Dual" time="226.724"/>
+  <testcase classname="Prepayment Meter - I have a bill to hand" name="Prepayment Meter user can successfully sign up with a Prepayment meter - Dual" time="198.918"/>
+  <testcase classname="Prepayment Meter - I have a bill to hand" name="Prepayment Meter user can successfully sign up with a Prepayment meter - Electric" time="196.215"/>
+  <testcase classname="Prepayment Meter - I have a bill to hand" name="Prepayment meter and Economy meter user with separate suppliers can successfully view results - Dual" time="157.213"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with unknown postcode EE00EE completing sign up with extra fields and viewing dashboard - Dual" time="194.173"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with postcode BN12 6HU completing sign up with extra fields values and viewing dashboard - Dual" time="188.332"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with unknown postcode EE00EE completing sign up with extra fields and viewing dashboard - Electric only" time="194.508"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with postcode BN12 6HU completing sign up with extra fields values and viewing dashboard  - Electric only" time="188.418"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with postcode bn126hu completing sign up with default values and viewing dashboard" time="171.062"/>
+  <testcase classname="Register - I have a bill to hand" name="I have a bill user with postcode ee00ee completing sign up with default values and viewing dashboard" time="176.92"/>
+  <testcase classname="Register - I have a bill to hand" name="User should not be able to submit the form if account holder name is less than 4 or more than 18 characters" time="148.788"/>
+  <testcase classname="Register - I have a bill to hand" name="User should not be able to submit the form if account holder name is less than 4 or more than 18 characters" time="150.584"/>
+  <testcase classname="Register - I have a bill to hand" name="User should not be able to submit the form if account holder name is less than 4 or more than 18 characters" time="157.45"/>
+  <testcase classname="Register - I have a bill to hand" name="User who has a known postcode can toggle the link to enter their address manually and successfully sign up" time="183.898"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="92.901"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="92.182"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.893"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="95.034"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.074"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.986"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.178"/>
+  <testcase classname="Results - I have a bill to hand" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.282"/>
+  <testcase classname="Results - I have a bill to hand" name="Switching to the estimator (I have a bill user) should display correct message on the results page" time="92.533"/>
+  <testcase classname="Login" name="Logging in successfully as a returning user" time="39.445"/>
+  <testcase classname="Login" name="User should be navigated to the correct page when entering their credentials" time="46.568"/>
+  <testcase classname="Login" name="User should be navigated to the correct page when entering their credentials" time="43.603"/>
+  <testcase classname="Login" name="User should be navigated to the correct page when entering their credentials" time="43.206"/>
+  <testcase classname="Login" name="Logging in with incorrect credentials should show validation message" time="43.587"/>
+  <testcase classname="Login" name="Logging in with incorrect credentials should show validation message" time="44.617"/>
+  <testcase classname="Contact us" name="Selecing the header links on contact us displays corressponding page" time="15.968">
+    <failure message="what is migrate? link is currently not recognised" type="java.lang.AssertionError">java.lang.AssertionError: what is migrate? link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ✽.user selects the &quot;What is Migrate?&quot; link(src/test/java/features/Marketing/ContactUs.feature:6)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579806856033	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.5hkiSSMd2JaQ&quot;
+1579806856685	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806856786	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806856787	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806856787	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806856787	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806858900	Marionette	INFO	Listening on port 53439
+1579806859225	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:14:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806864999	Marionette	INFO	Stopped listening on port 53439
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Contact us" name="Selecing the header links on contact us displays corressponding page" time="16.645">
+    <failure message="faqs link is currently not recognised" type="java.lang.AssertionError">java.lang.AssertionError: faqs link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ✽.user selects the &quot;FAQS&quot; link(src/test/java/features/Marketing/ContactUs.feature:6)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579806871998	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.dSNyAkyjVWQZ&quot;
+1579806872580	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806872680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806872680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806872681	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806872681	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806875108	Marionette	INFO	Listening on port 53509
+1579806875137	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:14:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806879406	Marionette	INFO	Stopped listening on port 53509
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Contact us" name="Selecing the header links on contact us displays corressponding page" time="19.176"/>
+  <testcase classname="Contact us" name="Selecing the header links on contact us displays corressponding page" time="25.301">
+    <error message="Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 12196, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1409c6d8-8512-433d-9757-3d4aded26b24
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 12196, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1409c6d8-8512-433d-9757-3d4aded26b24
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:813)
+	at ✽.user selects the &quot;Sign Up&quot; link(src/test/java/features/Marketing/ContactUs.feature:6)
+</error>
+    <system-out>true
+</system-out>
+    <system-err>1579806907829	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.BQpSIfYvtPS9&quot;
+1579806908405	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806908501	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806908501	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806908502	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806908502	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806910736	Marionette	INFO	Listening on port 53649
+1579806910979	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:15:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806925159	Marionette	INFO	Stopped listening on port 53649
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Contact us" name="Selecing the header links on contact us displays corressponding page" time="25.591">
+    <error message="Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 4432, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9b4b2f55-fafc-45f5-bbc2-3686ce644f82
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 4432, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9b4b2f55-fafc-45f5-bbc2-3686ce644f82
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:818)
+	at ✽.user selects the &quot;Login&quot; link(src/test/java/features/Marketing/ContactUs.feature:6)
+</error>
+    <system-out>true
+</system-out>
+    <system-err>1579806933125	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.tgQVDvH1xjZq&quot;
+1579806933784	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806933884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806933884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806933884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806933884	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806936140	Marionette	INFO	Listening on port 53721
+1579806936322	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:15:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806950796	Marionette	INFO	Stopped listening on port 53721
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="User validates the footer links on the home page" time="18.177">
+    <failure message="what is migrate? footer has not been recognised." type="java.lang.AssertionError">java.lang.AssertionError: what is migrate? footer has not been recognised.
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_should_see_the_header_with_the_following_items(LoginStep.java:2013)
+	at ✽.user should see the footer with the following items(src/test/java/features/Marketing/Footer.feature:6)
+</failure>
+    <system-out>item to check what is migrate? footer
+true
+</system-out>
+    <system-err>1579806958724	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.H3y7kDD1NbF2&quot;
+1579806959433	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806959532	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806959533	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806959533	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806959533	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806962396	Marionette	INFO	Listening on port 53792
+1579806963469	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:16:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806969097	Marionette	INFO	Stopped listening on port 53792
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="27.716">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579806976898	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.IJVB1FQci46q&quot;
+1579806977843	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579806977944	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579806977944	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579806977944	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579806977945	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579806980300	Marionette	INFO	Listening on port 53862
+1579806981301	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:16:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579806998030	Marionette	INFO	Stopped listening on port 53862
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="27.148">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807004621	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.9UyP7o485ZY5&quot;
+1579807005249	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807005349	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807005349	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807005349	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807005349	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807007569	Marionette	INFO	Listening on port 53936
+1579807007811	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:16:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807024045	Marionette	INFO	Stopped listening on port 53936
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="27.838">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807031768	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.mRurQ6P6YoFF&quot;
+1579807032417	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807032517	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807032517	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807032518	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807032518	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807034956	Marionette	INFO	Listening on port 54013
+1579807034968	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:17:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807053427	Marionette	INFO	Stopped listening on port 54013
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="25.998">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807059718	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.ohCncRolEmXQ&quot;
+1579807060370	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807060468	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807060468	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807060469	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807060469	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807062634	Marionette	INFO	Listening on port 54091
+1579807062861	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:17:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807080425	Marionette	INFO	Stopped listening on port 54091
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="26.047">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807085613	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.l1KM1Rlii4FO&quot;
+1579807086295	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807086393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807086393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807086393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807086393	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807088714	Marionette	INFO	Listening on port 54173
+1579807088802	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:18:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807105638	Marionette	INFO	Stopped listening on port 54173
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="27.306">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807111649	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.NABJafASZCl9&quot;
+1579807112329	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807112429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807112429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807112429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807112429	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807114677	Marionette	INFO	Listening on port 54255
+1579807114843	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:18:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807131204	Marionette	INFO	Stopped listening on port 54255
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the footer links displays the corressponding page" time="27.051">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:19)
+</failure>
+    <system-out>Selects the cookie privacy policy link
+true
+</system-out>
+    <system-err>1579807138953	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.B5DbdrMruOh5&quot;
+1579807139761	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807139860	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807139860	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807139860	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807139860	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807142043	Marionette	INFO	Listening on port 54335
+1579807142088	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:19:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807158265	Marionette	INFO	Stopped listening on port 54335
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the social media footer links displays the corressponding page" time="25.799">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:36)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807166004	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.Rnm3JtXtwDnt&quot;
+1579807166680	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807166781	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807166781	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807166781	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807166782	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807169151	Marionette	INFO	Listening on port 54413
+1579807169213	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:19:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807184131	Marionette	INFO	Stopped listening on port 54413
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the social media footer links displays the corressponding page" time="25.962">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:36)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807191803	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.efdJ5U5MG0jD&quot;
+1579807192480	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807192581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807192581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807192581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807192581	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807194812	Marionette	INFO	Listening on port 54488
+1579807194999	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:19:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807210193	Marionette	INFO	Stopped listening on port 54488
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Footer - Marketing pages" name="Selecting the social media footer links displays the corressponding page" time="25.063">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Footer.feature:36)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807217764	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.C7cAGFkRyS63&quot;
+1579807218506	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807218606	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807218606	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807218607	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807218607	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807220933	Marionette	INFO	Listening on port 54560
+1579807221081	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:20:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807236222	Marionette	INFO	Stopped listening on port 54560
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Header - Marketing pages" name="User sees the header items" time="16.829">
+    <failure message="what is migrate? has not been recognised." type="java.lang.AssertionError">java.lang.AssertionError: what is migrate? has not been recognised.
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_should_see_the_header_with_the_following_items(LoginStep.java:2013)
+	at ✽.user should see the header with the following items(src/test/java/features/Marketing/Header.feature:6)
+</failure>
+    <system-out>item to check what is migrate?
+true
+</system-out>
+    <system-err>1579807242846	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.MSFf9QHcXAzJ&quot;
+1579807243448	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807243550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807243550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807243550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807243550	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807245602	Marionette	INFO	Listening on port 54632
+1579807246047	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:20:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807253019	Marionette	INFO	Stopped listening on port 54632
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Header - Marketing pages" name="Selecting the header links displays corressponding page" time="14.14">
+    <failure message="what is migrate? link is currently not recognised" type="java.lang.AssertionError">java.lang.AssertionError: what is migrate? link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ✽.user selects the &quot;What is Migrate?&quot; link(src/test/java/features/Marketing/Header.feature:16)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807259667	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.dWkwkMLDs3K2&quot;
+1579807260291	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807260391	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807260391	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807260391	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807260392	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807262767	Marionette	INFO	Listening on port 54700
+1579807262836	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:21:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807267038	Marionette	INFO	Stopped listening on port 54700
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Header - Marketing pages" name="Selecting the header links displays corressponding page" time="16.278">
+    <failure message="faqs link is currently not recognised" type="java.lang.AssertionError">java.lang.AssertionError: faqs link is currently not recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:828)
+	at ✽.user selects the &quot;FAQS&quot; link(src/test/java/features/Marketing/Header.feature:16)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807273815	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.u8oVi5JJ9O5a&quot;
+1579807274358	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807274458	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807274458	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807274459	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807274459	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807276975	Marionette	INFO	Listening on port 54767
+1579807277957	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:21:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807282585	Marionette	INFO	Stopped listening on port 54767
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Header - Marketing pages" name="Selecting the header links displays corressponding page" time="17.825"/>
+  <testcase classname="Header - Marketing pages" name="Selecting the header links displays corressponding page" time="24.898">
+    <error message="Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 8940, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1ebf6dd9-ab57-4af0-add4-59f6e40c3d1c
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 8940, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1ebf6dd9-ab57-4af0-add4-59f6e40c3d1c
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[3]}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:813)
+	at ✽.user selects the &quot;Sign Up&quot; link(src/test/java/features/Marketing/Header.feature:16)
+</error>
+    <system-out>true
+</system-out>
+    <system-err>1579807307921	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.2yuCSVCLNAEN&quot;
+1579807308653	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807308754	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807308754	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807308754	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807308754	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807311218	Marionette	INFO	Listening on port 54912
+1579807311251	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:21:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807326160	Marionette	INFO	Stopped listening on port 54912
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Header - Marketing pages" name="Selecting the header links displays corressponding page" time="23.226">
+    <error message="Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10072, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f265151e-5839-47e4-93a6-d38ffd7a6ee9
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;LAPTOP-0ORCG1QR&apos;, ip: &apos;192.168.13.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 10072, moz:profile: C:\Users\ladyg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f265151e-5839-47e4-93a6-d38ffd7a6ee9
+*** Element info: {Using=xpath, value=.//nav//div[@class=&apos;navigation__right-inner&apos;]//following-sibling::li[4]}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at seleniumgluecode.LoginStep.getWebElementByXpath(LoginStep.java:81)
+	at seleniumgluecode.LoginStep.user_selects_the_link(LoginStep.java:818)
+	at ✽.user selects the &quot;Login&quot; link(src/test/java/features/Marketing/Header.feature:16)
+</error>
+    <system-out>true
+</system-out>
+    <system-err>1579807332801	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.CJniBAzgeh98&quot;
+1579807333428	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807333529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807333529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807333529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807333529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807335917	Marionette	INFO	Listening on port 54984
+1579807336009	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:22:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807350262	Marionette	INFO	Stopped listening on port 54984
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 173: Error: Data is not ready.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Home - Marketing page" name="Selecing the links on the home page displays corressponding page" time="26.542">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Home.feature:6)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807356044	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.8GpsuINLCpfa&quot;
+1579807356594	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807356692	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807356692	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807356692	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807356693	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807358939	Marionette	INFO	Listening on port 55054
+1579807359207	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:22:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807374271	Marionette	INFO	Stopped listening on port 55054
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Home - Marketing page" name="Selecing the links on the home page displays corressponding page" time="26.013">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Home.feature:6)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807382587	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.evGMkddJlNbN&quot;
+1579807383316	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807383417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807383417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807383417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807383417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807386101	Marionette	INFO	Listening on port 55127
+1579807386224	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:23:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807402003	Marionette	INFO	Stopped listening on port 55127
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Home - Marketing page" name="Selecing the links on the home page displays corressponding page" time="26.105">
+    <failure message="There has been an error selecting this button cookie ok" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button cookie ok
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;cookie OK&quot; button(src/test/java/features/Marketing/Home.feature:6)
+</failure>
+    <system-out>true
+</system-out>
+    <system-err>1579807408608	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.8FvWmc1Qv0oo&quot;
+1579807409214	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807409317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807409317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807409317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807409317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807411597	Marionette	INFO	Listening on port 55201
+1579807411768	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:23:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579807426868	Marionette	INFO	Stopped listening on port 55201
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Dashboard - No bill to hand" name="The correct Address (ee00ee), Preferences, Personal details are shown on the dashboard - no bill to hand, Electric" time="204.486"/>
+  <testcase classname="Dashboard - No bill to hand" name="Prepayment user can edit their econ meter usage details, Preferences and Personal details and select the link for Prepayment meter" time="91.175"/>
+  <testcase classname="Economy 7 meter - No bill to hand" name="Economy 7 meter and Prepayment meter user can successfully Sign up and view and edit their details on the Dashboard - Electric only" time="241.925"/>
+  <testcase classname="Economy 7 meter - No bill to hand" name="Economy 7 meter user can successfully sign up and view and edit their details on the Dashboard - Dual" time="118.053">
+    <failure message="There has been an error selecting this button usage" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button usage
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;Usage&quot; button(src/test/java/features/NoBillToHand/NoBillToHand-EconMeter.feature:75)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type dual
+Selects the button name continue
+Actual value displayed in supplier field is Monthly Direct Debit and the energy type is dual payment
+Selects the button name econ meter yes
+Selects the button name continue
+Selecting house size large
+Selecting form element in estimator In my house lives and value 3 People
+Selecting form element in estimator My heating source is and value Gas
+Selecting form element in estimator My energy usage is and value Low user (second home)
+Selecting form element in estimator My insulation is and value Paper-thin
+true
+</system-out>
+    <system-err>1579807972336	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.fVyTtG2g6dSk&quot;
+1579807973004	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579807973106	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579807973106	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579807973106	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579807973106	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579807975862	Marionette	INFO	Listening on port 55798
+1579807975975	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 7:32:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579808087137	Marionette	INFO	Stopped listening on port 55798
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Estimator - No bill to hand" name="Route info message should mention No bill to hand" time="108.709"/>
+  <testcase classname="Estimator - No bill to hand" name="Selecting the estimator with Econ 7 values should display the additional heating field" time="167.411"/>
+  <testcase classname="Estimator - No bill to hand" name="Toggling between estimator and I know my numbers should remember the selection for the econ 7 meter" time="140.498"/>
+  <testcase classname="Estimator - No bill to hand" name="Selecting the estimator should keep user in I don&apos;t have a bill mode on the results page" time="97.552"/>
+  <testcase classname="Prepayment Meter - No bill to hand" name="Prepayment Meter user can successfully sign up with a Prepayment meter - Dual" time="192.451"/>
+  <testcase classname="Prepayment Meter - No bill to hand" name="Prepayment Meter user can successfully sign up with a Prepayment meter - Electric" time="188.048"/>
+  <testcase classname="Prepayment Meter - No bill to hand" name="Prepayment meter and Economy meter user with separate suppliers can successfully sign up - Dual" time="146.153"/>
+  <testcase classname="Register - No bill to hand user" name="No bill to hand user with unknown postcode EE00EE completing sign up with extra fields and viewing dashboard - Dual" time="201.117"/>
+  <testcase classname="Register - No bill to hand user" name="No bill to hand user with postcode BN12 6HU completing sign up with extra fields values and viewing dashboard  - Electric only" time="193.502"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="112.004"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="111.381"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="111.467"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="112.369"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="113.165"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="112.039"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="112.991"/>
+  <testcase classname="Results - No bill to hand" name="Selecting the supplier options updates the lozenge, metadata and text on the page accordingly" time="113.394"/>
+  <testcase classname="Results - No bill to hand" name="Results should display the correct route info text for No Bill to Hand routes (Start and Exit on I Dont Have a Bill)" time="108.529"/>
+  <testcase classname="Results - No bill to hand" name="Results should display the correct route info text for No Bill to Hand routes (Start on I Don&apos;t Have a Bill, Exit on I Have a Bill )" time="90.763"/>
+  <testcase classname="Paper billing" name="Selecting paper billing should display the selection in the paper billing drop down" time="144.477"/>
+  <testcase classname="Paper billing" name="Selecting paper billing should display the selection in the paper billing drop down" time="144.631"/>
+  <testcase classname="Paper billing" name="Selecting paper billing should display the selection in the paper billing drop down" time="145.183"/>
+  <testcase classname="Prepayment Meter" name="Selecting the Here link in the Prepayment prompt opens a new window" time="0"/>
+  <testcase classname="Prepayment Meter" name="If user selects prepayment meter and non-prepayment meter as the payment method then validation message should appear" time="86.733"/>
+  <testcase classname="Privacy Policy" name="Selecting OK on the privacy policy banner closes the banner" time="20.733"/>
+  <testcase classname="Dashboard - Recently Moved In" name="The correct Address, Preferences, Personal details are shown on the dashboard - recently moved in" time="207.262"/>
+  <testcase classname="Dashboard - Recently Moved In" name="Prepayment user can edit their econ meter usage details, Preferences and Personal details and select the link for Prepayment meter" time="29.204">
+    <failure message="There has been an error selecting this button login" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button login
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at seleniumgluecode.LoginStep.user_logs_in_as_a_user(LoginStep.java:1078)
+	at ✽.user logs in as a &quot;registered&quot; user &quot;elec econ&quot;,&quot;TestUser1&quot;,&quot;Login&quot;(src/test/java/features/RecentlyMovedIn/MovedIn-Dashboard.feature:56)
+</failure>
+    <system-out>Selects the button name cookie ok
+true
+</system-out>
+    <system-err>1579811372966	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.uSFgYg5NaroQ&quot;
+1579811373534	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579811373636	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579811373636	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579811373636	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579811373637	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579811375957	Marionette	INFO	Listening on port 59695
+1579811376137	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 8:29:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579811395315	Marionette	INFO	Stopped listening on port 59695
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Economy 7 meter - Recently moved in" name="User can successfully sign up with a Economy 7 meter and a Prepayment meter - Dual and Electric" time="184.78"/>
+  <testcase classname="Economy 7 meter - Recently moved in" name="User can successfully sign up with a Economy 7 meter  - Dual and Electric" time="177.466"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="87.495"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="88.462"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="77.893"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="86.773"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="86.129"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the options in the Estimator and Route info message should mention Recently moved in" time="77.527"/>
+  <testcase classname="Estimator - Moved in" name="Selecting the estimator with Econ 7 values should display the additional heating field" time="157.123"/>
+  <testcase classname="Estimator - Moved in" name="Toggling between energy and supplier pages should remember the selection for the econ 7 meter" time="137.129"/>
+  <testcase classname="Prepayament meter - Recently moved in" name="User can successfully sign up with a Economy 7 meter and a Prepayment meter - Dual and Electric" time="180.359"/>
+  <testcase classname="Prepayament meter - Recently moved in" name="User can successfully sign up with a Economy 7 meter and a Prepayment meter - Dual and Electric" time="181.582"/>
+  <testcase classname="Register - Recently Moved In" name="A returning user start again in the same session with an unknown postcode and successfully sign up and view dashboard" time="280.937"/>
+  <testcase classname="Results - Recently moved in" name="Selecting the supplier options updates the lozenge, metadata on the page accordingly" time="109.965">
+    <failure message="The option was not selected for paper billing" type="java.lang.AssertionError">java.lang.AssertionError: The option was not selected for paper billing
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_confirms_the_radio_is_selected(LoginStep.java:3776)
+	at ✽.user confirms the radio is selected &quot;Paper Billing&quot;(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:14)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Selects the button name econ meter yes
+Selects the button name continue
+Selecting form element in estimator In my house lives and value 5 People
+Selecting form element in estimator My heating source is and value Economy 7 Electricity
+Selecting form element in estimator My energy usage is and value Low user (second home)
+Selecting form element in estimator My insulation is and value Paper-thin
+Selects the button name usage
+Selects the button name green energy
+true
+</system-out>
+    <system-err>1579813205862	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.t6MEpOo7wIOA&quot;
+1579813206512	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579813206612	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579813206612	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579813206613	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579813206613	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579813209132	Marionette	INFO	Listening on port 61685
+1579813209505	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 9:00:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579813312091	Marionette	INFO	Stopped listening on port 61685
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Results - Recently moved in" name="Selecting the supplier options updates the lozenge, metadata on the page accordingly" time="109.121">
+    <failure message="An error occured with validating the metadata for WHD" type="java.lang.AssertionError">java.lang.AssertionError: An error occured with validating the metadata for WHD
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_metadata_field(LoginStep.java:3802)
+	at ✽.user validates the metadata field &quot;WHD&quot;(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:15)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Selects the button name econ meter yes
+Selects the button name continue
+Selecting form element in estimator In my house lives and value 5 People
+Selecting form element in estimator My heating source is and value Economy 7 Electricity
+Selecting form element in estimator My energy usage is and value Low user (second home)
+Selecting form element in estimator My insulation is and value Paper-thin
+Selects the button name usage
+Selects the button name green energy
+Confirmed the radio was selected for whd
+true
+</system-out>
+    <system-err>1579813315930	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.S2DbBpUwpBdF&quot;
+1579813316472	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579813316573	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579813316573	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579813316573	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579813316574	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579813319269	Marionette	INFO	Listening on port 61812
+1579813320437	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 9:02:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579813421156	Marionette	INFO	Stopped listening on port 61812
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Results - Recently moved in" name="Selecting the supplier options updates the lozenge, metadata on the page accordingly" time="109.233">
+    <failure message="An error occured with validating the metadata for Top rated" type="java.lang.AssertionError">java.lang.AssertionError: An error occured with validating the metadata for Top rated
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_metadata_field(LoginStep.java:3802)
+	at ✽.user validates the metadata field &quot;Top rated&quot;(src/test/java/features/RecentlyMovedIn/MovedIn-Results.feature:15)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Selects the button name econ meter yes
+Selects the button name continue
+Selecting form element in estimator In my house lives and value 5 People
+Selecting form element in estimator My heating source is and value Economy 7 Electricity
+Selecting form element in estimator My energy usage is and value Low user (second home)
+Selecting form element in estimator My insulation is and value Paper-thin
+Selects the button name usage
+Selects the button name green energy
+Confirmed the radio was selected for ratings
+true
+</system-out>
+    <system-err>1579813424945	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.RimazvdAQfQJ&quot;
+1579813425568	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579813425680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579813425680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579813425680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579813425680	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579813427975	Marionette	INFO	Listening on port 61953
+1579813428129	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 9:03:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579813530501	Marionette	INFO	Stopped listening on port 61953
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Results - Recently moved in" name="Results should display the correct route info text for Recently Moved In routes (Start and Exit on I Just Moved In)" time="105.315"/>
+  <testcase classname="Refer a friend" name="User can successfully sign up using the refer a friend link" time="171.066"/>
+  <testcase classname="Refer a friend" name="User can successfully sign up using the refer a friend link" time="171.276"/>
+  <testcase classname="Register page" name="I have a bill user with postcode ee00ee completing sign up with default values and viewing dashboard" time="183.344"/>
+  <testcase classname="Register page" name="I have a bill user with postcode bn126hu completing sign up with default values and viewing dashboard" time="190.287"/>
+  <testcase classname="Register page" name="If incorrect direct debits are entered then validation message appears" time="137.14"/>
+  <testcase classname="Register page" name="If correct direct debits are entered then user sees confirmation details" time="61.886"/>
+  <testcase classname="Register page" name="User should not be able to submit the form if DOB is not between 18 and 100" time="65.199"/>
+  <testcase classname="Register page" name="Validation messages appear on the register page if fields are left empty" time="0"/>
+  <testcase classname="Register page" name="Toggling the enter address manually link displays validation messages if left empty" time="0"/>
+  <testcase classname="Register page" name="Validation message appears if T&amp;C&apos;s have not been checked" time="151.883"/>
+  <testcase classname="Register page" name="Entering invalid data in the register form displays validation messages" time="154.214"/>
+  <testcase classname="Register page" name="Entering incorrect previous address data in the register form displays additional validation fields" time="160.068"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="94.119"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.444"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="92.379"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.078"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.814"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.221"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="93.396"/>
+  <testcase classname="Results" name="Selecting the supplier options updates the metadata on the page accordingly" time="91.954"/>
+  <testcase classname="Returning user" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="49.856"/>
+  <testcase classname="Returning user" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="50.283"/>
+  <testcase classname="Returning user" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="49.001"/>
+  <testcase classname="Returning user" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="47.793"/>
+  <testcase classname="Prepayment Meter - I have a bill to hand" name="User can successfully sign up with a Prepayment meter - separate gas and electric suppliers" time="60.516">
+    <failure message="
+The same supplier no button has not been recognised" type="java.lang.AssertionError">java.lang.AssertionError: 
+The same supplier no button has not been recognised
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:490)
+	at ✽.user selects the &quot;same supplier no&quot; button(src/test/java/features/SameSupplier.feature:10)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+User has selected energy type gas &amp; electric
+Selects the button name continue
+true
+</system-out>
+    <system-err>1579816028372	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.t9NVzLAMfOWI&quot;
+1579816028908	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579816029009	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579816029009	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579816029010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579816029010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579816031255	Marionette	INFO	Listening on port 65250
+1579816031515	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 9:47:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579816085138	Marionette	INFO	Stopped listening on port 65250
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Start Again" name="Selecting the start again button for a new user takes the user to the new user sign up page" time="208.933"/>
+  <testcase classname="Start Again" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="49.022"/>
+  <testcase classname="Start Again" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="50.21"/>
+  <testcase classname="Start Again" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="52.22"/>
+  <testcase classname="Start Again" name="Selecting the start again button for a retruning user takes the user to the returning users sign up page" time="49.212"/>
+  <testcase classname="Start Again" name="Selecting cancel in the start again dialog closes the dialog and user remains on the same page" time="46.847"/>
+  <testcase classname="Start Again" name="Selecting cancel in the start again dialog closes the dialog and user remains on the same page" time="45.62"/>
+  <testcase classname="Start Again" name="Selecting cancel in the start again dialog closes the dialog and user remains on the same page" time="46.612"/>
+  <testcase classname="Start Again" name="Selecting cancel in the start again dialog closes the dialog and user remains on the same page" time="46.406"/>
+  <testcase classname="Start Again" name="Selecting the Start again button on the Register page, takes the user to the returning users sign up page" time="139.441"/>
+  <testcase classname="Start Again" name="Start again button on the Create an account page for a new user takes the user to the sign up page" time="98.72"/>
+  <testcase classname="Start Again" name="A returning user can start again and successfully navigate back into the funnel" time="74.266"/>
+  <testcase classname="Start Again" name="A returning user can start again with a known postcode and successfully navigate back into the funnel" time="75.36"/>
+  <testcase classname="Start Again" name="A returning user can start again with an unknown postcode and successfully navigate back into the funnel" time="88.163"/>
+  <testcase classname="Supplier Info - No bill to hand" name="Selecting My Payment Method is not shown option will display the Missing payment Type prompt" time="67.926">
+    <failure message="Cannot see the prompt missing payment type" type="java.lang.AssertionError">java.lang.AssertionError: Cannot see the prompt missing payment type
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_sees_the_prompt(LoginStep.java:3708)
+	at ✽.user sees the &quot;Missing Payment Type&quot; prompt(src/test/java/features/SuppierInfoNoBill.feature:14)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Actual value displayed in supplier field is My payment method is not shown and the energy type is dual payment
+true
+</system-out>
+    <system-err>1579817159799	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.hdi19CrA1IsJ&quot;
+1579817160467	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579817160569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579817160569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579817160569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579817160569	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579817162960	Marionette	INFO	Listening on port 50624
+1579817163000	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:06:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579817224410	Marionette	INFO	Stopped listening on port 50624
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Deselecting the checkbox &apos;I have same suppliers..&apos; shows both gas and electric fields" time="65.964"/>
+  <testcase classname="Supplier Info" name="Selecting separate Gas and Electric suppliers should display these values as selected" time="78.464"/>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="91.184"/>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="91.01"/>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="90.09"/>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="76.471">
+    <failure message="An error occured with selecting a top six supplier energy type is edf energy" type="java.lang.AssertionError">java.lang.AssertionError: An error occured with selecting a top six supplier energy type is edf energy
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ✽.user selects a top six supplier &quot;EDF Energy&quot; icon(src/test/java/features/SupplierInfo.feature:38)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Actual page heading h1 is Who&apos;s your current supplier? and expected page heading is Who&apos;s your current supplier?
+Validated that the field is present dual
+true
+</system-out>
+    <system-err>1579817644442	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.AzsQaRIthAkI&quot;
+1579817645091	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579817645191	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579817645191	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579817645191	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579817645192	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579817647655	Marionette	INFO	Listening on port 51375
+1579817647708	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:14:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579817717476	Marionette	INFO	Stopped listening on port 51375
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="90.39"/>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - dual and not same supplier" time="95.907">
+    <failure message="An error occured with selecting a top six supplier energy type is british gas" type="java.lang.AssertionError">java.lang.AssertionError: An error occured with selecting a top six supplier energy type is british gas
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ✽.user selects a top six supplier &quot;British Gas&quot; icon(src/test/java/features/SupplierInfo.feature:47)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Actual page heading h1 is Who&apos;s your current supplier? and expected page heading is Who&apos;s your current supplier?
+Validated that the field is present dual
+user has selected dual supplier british gas
+ Top 6 supplier button is enabled  british gas
+Selects the button name same supplier no
+Validated that the field is present electric
+user has selected dual supplier british gas
+ Top 6 supplier button is enabled  british gas
+Selects the button name gas
+Validated that the field is present gas
+true
+</system-out>
+    <system-err>1579817811314	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.ZzU5d9AO0TMD&quot;
+1579817811942	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579817812041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579817812041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579817812041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579817812041	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579817814511	Marionette	INFO	Listening on port 51622
+1579817814526	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:16:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579817904157	Marionette	INFO	Stopped listening on port 51622
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="69.475">
+    <failure message="elec supplier expected:&lt;[npower]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: elec supplier expected:&lt;[npower]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ✽.the supplier dropdown &quot;elec supplier&quot; displays value &quot;npower&quot;(src/test/java/features/SupplierInfo.feature:67)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+user has selected top six suppliernpower
+ Top 6 supplier button is enabled  npower
+true
+</system-out>
+    <system-err>1579817907222	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.Fp7ufoxJBin0&quot;
+1579817907741	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579817907843	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579817907843	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579817907843	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579817907843	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579817910326	Marionette	INFO	Listening on port 51755
+1579817910357	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:18:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579817973201	Marionette	INFO	Stopped listening on port 51755
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="70.962">
+    <failure message="elec supplier expected:&lt;[E.ON]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: elec supplier expected:&lt;[E.ON]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ✽.the supplier dropdown &quot;elec supplier&quot; displays value &quot;E.ON&quot;(src/test/java/features/SupplierInfo.feature:67)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+user has selected top six supplier e.on
+ Top 6 supplier button is enabled  e.on
+true
+</system-out>
+    <system-err>1579817976693	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.qIbKp5goRjSS&quot;
+1579817977326	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579817977427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579817977427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579817977427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579817977427	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579817979497	Marionette	INFO	Listening on port 51878
+1579817979886	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:19:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579818044354	Marionette	INFO	Stopped listening on port 51878
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="70.576">
+    <failure message="elec supplier expected:&lt;[ScottishPower]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: elec supplier expected:&lt;[ScottishPower]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ✽.the supplier dropdown &quot;elec supplier&quot; displays value &quot;ScottishPower&quot;(src/test/java/features/SupplierInfo.feature:67)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+user has selected top six supplier scottishpower
+ Top 6 supplier button is enabled  scottishpower
+true
+</system-out>
+    <system-err>1579818047652	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.BBrbyecdYtau&quot;
+1579818048308	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579818048409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579818048409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579818048409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579818048409	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579818050818	Marionette	INFO	Listening on port 51998
+1579818050869	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:20:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579818114793	Marionette	INFO	Stopped listening on port 51998
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="75.541">
+    <failure message="An error occured with selecting a top six supplier energy type is edf energy" type="java.lang.AssertionError">java.lang.AssertionError: An error occured with selecting a top six supplier energy type is edf energy
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_a_top_six_supplier_icon(LoginStep.java:1777)
+	at ✽.user selects a top six supplier &quot;EDF Energy&quot; icon(src/test/java/features/SupplierInfo.feature:65)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+true
+</system-out>
+    <system-err>1579818118234	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.BUaE9S05j5B8&quot;
+1579818118811	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579818118911	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579818118911	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579818118912	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579818118912	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579818121631	Marionette	INFO	Listening on port 52110
+1579818121913	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:22:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579818190437	Marionette	INFO	Stopped listening on port 52110
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="71.736">
+    <failure message="elec supplier expected:&lt;[SSE]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: elec supplier expected:&lt;[SSE]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ✽.the supplier dropdown &quot;elec supplier&quot; displays value &quot;SSE&quot;(src/test/java/features/SupplierInfo.feature:67)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+user has selected top six supplier sse
+ Top 6 supplier button is enabled  sse
+true
+</system-out>
+    <system-err>1579818193779	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.TODA6NM4TkSY&quot;
+1579818194428	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579818194530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579818194530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579818194530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579818194530	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579818196669	Marionette	INFO	Listening on port 52231
+1579818196977	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:23:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579818262146	Marionette	INFO	Stopped listening on port 52231
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Selecting the top six suppliers displays the value in the supplier dropdown field - Electric" time="68.471">
+    <failure message="elec supplier expected:&lt;[British Gas]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: elec supplier expected:&lt;[British Gas]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at seleniumgluecode.LoginStep.the_supplier_dropdown_displays_supplier(LoginStep.java:1564)
+	at ✽.the supplier dropdown &quot;elec supplier&quot; displays value &quot;British Gas&quot;(src/test/java/features/SupplierInfo.feature:67)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Validated that the field is present electric
+user has selected dual supplier british gas
+ Top 6 supplier button is enabled  british gas
+true
+</system-out>
+    <system-err>1579818265586	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.KqJX8qMWsTIZ&quot;
+1579818266160	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579818266258	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579818266258	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579818266258	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579818266258	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579818268436	Marionette	INFO	Listening on port 52348
+1579818268734	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:24:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1579818330548	Marionette	INFO	Stopped listening on port 52348
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Supplier Info" name="Navigating between dual and electric and same supplier checkbox displays the correct page" time="107.816"/>
+  <testcase classname="Supplier Info Electric" name="Selecting Prepayment Payment method should display the Prepayment prompt" time="85.638"/>
+  <testcase classname="TIL -Results" name="Switch now user viewing the TIL and switching to that tariff" time="124.747"/>
+  <testcase classname="TIL -Results" name="Delayed user viewing the TIL and switching to that tariff" time="120.405"/>
+  <testcase classname="TIL -Results" name="Delayed user viewing the TIL and switching to that tariff" time="119.483"/>
+  <testcase classname="Dashboard - Third Party Agent" name="User confirms address has been added to the dashboard" time="0"/>
+  <testcase classname="Register - Third Party Agent" name="Third party option is displayed for agent council users on the register page" time="0"/>
+  <testcase classname="Usage info" name="Entering usage numbers kWh for dual suppliers and then entering numbers for separate suppliers successfully - kWh" time="179.272"/>
+  <testcase classname="Usage info" name="Entering usage numbers kWh for dual and Economy meter usage fields successfully - kWh &amp; Spend" time="85.339">
+    <failure message="Error - error validating page text What&apos;s your current usage?" type="java.lang.AssertionError">java.lang.AssertionError: Error - error validating page text What&apos;s your current usage?
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_page_text(LoginStep.java:2430)
+	at ✽.user validates the page text &quot;What&apos;s your current usage?&quot;(src/test/java/features/Usage.feature:47)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type gas &amp; electric
+Selects the button name continue
+Actual value displayed in supplier field is Standard Fair Deal and the energy type is dual tariff
+Actual value displayed in supplier field is Quarterly Direct Debit and the energy type is dual payment
+Selects the button name econ meter yes
+Selects the button name continue
+true
+</system-out>
+    <system-err>1579819072004	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.BoqHBX7ZZRKD&quot;
+1579819072541	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579819072640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579819072640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579819072640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579819072640	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819074887	Marionette	INFO	Listening on port 53333
+1579819075154	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:37:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819153110	Marionette	INFO	Stopped listening on port 53333
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Usage info" name="Entering usage numbers for Electric and Economy meter usage fields successfully - kWh &amp; Spend" time="85.89">
+    <failure message="Error - error validating page text What&apos;s your current usage?" type="java.lang.AssertionError">java.lang.AssertionError: Error - error validating page text What&apos;s your current usage?
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_validates_the_page_text(LoginStep.java:2430)
+	at ✽.user validates the page text &quot;What&apos;s your current usage?&quot;(src/test/java/features/Usage.feature:72)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Actual value displayed in supplier field is Standard and the energy type is elec tariff
+Actual value displayed in supplier field is Monthly Direct Debit and the energy type is elec payment
+Selects the button name econ meter yes
+Selects the button name continue
+true
+</system-out>
+    <system-err>1579819156711	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.gBOrW9GdYotT&quot;
+1579819157343	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579819157443	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579819157443	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579819157443	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579819157443	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819159606	Marionette	INFO	Listening on port 53462
+1579819159914	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:39:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819239127	Marionette	INFO	Stopped listening on port 53462
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Usage info" name="Entering incorrect usage numbes displays validation messages -  elec kWh" time="95.995">
+    <failure message="There has been an error selecting this button inactive continue" type="java.lang.AssertionError">java.lang.AssertionError: There has been an error selecting this button inactive continue
+	at org.junit.Assert.fail(Assert.java:89)
+	at seleniumgluecode.LoginStep.user_selects_the_button(LoginStep.java:498)
+	at ✽.user selects the &quot;Inactive continue&quot; button(src/test/java/features/Usage.feature:95)
+</failure>
+    <system-out>Selects the button name cookie ok
+Actual page heading h1 is Welcome! and expected page heading is Welcome!
+Entering postcode bn126hu
+Selects the button name let&apos;s go
+selecting top nav icon energy
+User has selected energy type electric
+Selects the button name continue
+Actual value displayed in supplier field is Standard and the energy type is elec tariff
+Actual value displayed in supplier field is Quarterly Direct Debit and the energy type is elec payment
+Selects the button name econ meter no
+Selects the button name continue
+User has entered usage number 3548
+true
+</system-out>
+    <system-err>1579819242593	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\ladyg\\AppData\\Local\\Temp\\rust_mozprofile.yHpHokngaV7d&quot;
+1579819243210	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension &apos;doh-rollout@mozilla.org&apos;: Reading manifest: Invalid extension permission: networkStatus
+1579819243307	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: mozillaAddons
+1579819243307	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: telemetry
+1579819243307	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: resource://pdf.js/
+1579819243308	addons.webextension.screenshots@mozilla.org	WARN	Loading extension &apos;screenshots@mozilla.org&apos;: Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819245613	Marionette	INFO	Listening on port 53590
+1579819245774	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jan 23, 2020 10:40:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+1579819335654	Marionette	INFO	Stopped listening on port 53590
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+</system-err>
+  </testcase>
+  <testcase classname="Usage info" name="Selecting a frequency successfully - kWh and Spend" time="168.286"/>
+  <testcase classname="Variable tariff" name="Selecting the variable tariff threshold saves the amount selected" time="85.426"/>
+  <testcase classname="WHD" name="Selecting the WHD options updates the lozenge, metadata and text on the page accordingly" time="103.968"/>
+  <testcase classname="WHD" name="User can edit their WHD preference on the dashboard" time="59.511"/>
 </testsuite>

@@ -7,7 +7,7 @@ Feature: Energy Type
     Given user selects top nav icon "Energy"
     And user validates the page heading "What type of energy does your home use?"
 
-  @test
+  @ready 
   Scenario Outline: Selecting an energy type navigates user to the supplier info page
     When user selects "<energy type>" energy type
     And user selects the "Continue" button
@@ -16,4 +16,4 @@ Feature: Energy Type
     Examples: 
       | energy type    | buttonState | heading                      |
       | Gas & Electric | active      | Who's your current supplier? |
-      | Electric       | active      | Whos your current supplier? |
+      | Electric       | active      | Who's your current supplier? |

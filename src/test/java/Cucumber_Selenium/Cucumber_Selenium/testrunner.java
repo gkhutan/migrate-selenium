@@ -10,8 +10,10 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
 				features = "src/test/java/features",
 				tags = 	 {"@test"},
+				plugin = {"pretty" ,"html:target/cucumber-report"},
 				glue= 	 {"seleniumgluecode"},
-				monochrome = true
+				monochrome = true,
+				strict = false
 )
 
 public class testrunner {

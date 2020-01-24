@@ -1,4 +1,4 @@
-Feature: Economy Meter 7
+Feature: Economy 7 Meter
 
   @ready
   Scenario: Entering incorrect usage numbes for kWh displays validation messages - dual kWh

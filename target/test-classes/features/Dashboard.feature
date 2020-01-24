@@ -2,15 +2,15 @@ Feature: Dashboard
   
   As an unregistered user I want to be regiter with Migrate to switch to the deal I have chosen
 
-  @ready
+  @ready @smoketest
   Scenario: User can edit their Econ meter, Usage details, Preferences and Personal details
     Given user logs in as a "registered" user "dual econ","TestUser1","Login"
     Given user selects the "Edit Usage" button
     And user selects the "close dialog" button
     Given user selects the "Edit Usage" button
-    And user enters their "Electric day kWh" usage numbers "2222"
-    And user enters their "Electric night kWh" usage numbers "5555"
-    And user enters their "Gas kWh" usage numbers "3333"
+    And user enters their "Electric day kWh" usage numbers manually "2222"
+    And user enters their "Electric night kWh" usage numbers manually "5555"
+    And user enters their "Gas kWh" usage numbers manually "3333"
     And user selects the "Save usage" button
     And user validates their "Electric day" usage number "2222 kWh"
     And user validates their "Electric night" usage number "5555 kWh"
@@ -44,7 +44,7 @@ Feature: Dashboard
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario Outline: The user's address is displayed on the dashboard
     Given user logs in as a "registered" user "<Email>","TestUser1","Login"
     And user validates the address "<address>"
@@ -54,28 +54,28 @@ Feature: Dashboard
       | elec                 | 4, Melville Way, Goring-by-sea, WORTHING, West Sussex, BN12 6HU |
       | test unknown address | test name, test address, sw14pa                                 |
 
-  @ready
+  @ready 
   Scenario: Entering usage numbers and personal details incorrecly displays validation messages - dual, econ 7
     Given user logs in as a "registered" user "dual econ","TestUser1","Login"
     Given user selects the "Edit Usage" button
-    And user enters their "Electric day kwh" usage numbers " "
-    And user enters their "Electric night kwh" usage numbers " "
-    And user enters their "Gas kwh" usage numbers " "
+    And user enters their "Electric day kwh" usage numbers manually " "
+    And user enters their "Electric night kwh" usage numbers manually " "
+    And user enters their "Gas kwh" usage numbers manually " "
     And user selects the "inactive save usage" button
     Then user sees a list of validation messages
       | Please provide your new electricity usage |
       | Please provide your new electricity usage |
       | Please provide your new gas usage         |
-    And user enters their "Electric day kwh" usage numbers "abcd"
-    And user enters their "Electric night kwh" usage numbers "abcd"
-    And user enters their "gas kwh" usage numbers "abcd"
+    And user enters their "Electric day kwh" usage numbers manually "abcd"
+    And user enters their "Electric night kwh" usage numbers manually "abcd"
+    And user enters their "gas kwh" usage numbers manually "abcd"
     Then user sees a list of validation messages
       | Your electricity usage must be a number |
       | Your electricity usage must be a number |
       | Your gas usage must be a number         |
-    And user enters their "Electric day kwh" usage numbers "123344445444"
-    And user enters their "Electric night kwh" usage numbers "123344445444"
-    And user enters their "Gas kwh" usage numbers "123344445444"
+    And user enters their "Electric day kwh" usage numbers manually "123344445444"
+    And user enters their "Electric night kwh" usage numbers manually "123344445444"
+    And user enters their "Gas kwh" usage numbers manually "123344445444"
     Then user sees a list of validation messages
       | Your electricity usage must be less than 999998 |
       | Your electricity usage must be less than 999998 |
@@ -95,16 +95,14 @@ Feature: Dashboard
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
-  Scenario: User can select the link for Prepayment meter successfully
-
+	@ready
   Scenario: Editing usage numbers and personal details incorrecly displays validation messages - elec
     Given user logs in as a "registered" user "elec","TestUser1","Login"
     Given user selects the "Edit Usage" button
-    And user enters their "Electric kwh" usage numbers " "
+    And user enters their "Electric kwh" usage numbers manually " "
     And user selects the "Inactive save usage" button
     And user sees validation message "Please provide your new electricity usage"
-    And user enters their "Electric kwh" usage numbers "abcd"
+    And user enters their "Electric kwh" usage numbers manually "abcd"
     And user selects the "Inactive save usage" button
     And user sees validation message "Your electricity usage must be a number"
     And user selects the "close dialog" button
@@ -132,7 +130,7 @@ Feature: Dashboard
     And user validates the savings cost "£89.89"
     And user validates the tariff name "Go Green (1 Year) v23"
 
-  @ready
+  @ready @smoketest
   Scenario: Selecting the social media icons navigates user to the correct social media page
     Given user logs in as a "registered" user "dashboard user","TestUser1","Login"
     And user selects the "Facebook" link
@@ -144,7 +142,7 @@ Feature: Dashboard
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario: User can navigate back to the dashboard successfully
     Given user logs in as a "registered" user "dashboard user","TestUser1","Login"
     And user selects the "home" button
@@ -170,7 +168,7 @@ Feature: Dashboard
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario: Editing bank account numbers successfully
     Given user logs in as a "registered" user "dashboard user","TestUser1","Login"
     And user selects the "Edit details" button

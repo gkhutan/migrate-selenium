@@ -6,7 +6,7 @@ Feature: Register page
   Scenario: I have a bill user with postcode ee00ee completing sign up with default values and viewing dashboard
     Given I am a new user type with unknown postcode "Welcome!","ee00ee","I have a bill to hand","London","Let's go"
     And user has selected an energy type "Gas & Electric"
-     And user has selected their default energy supplier information
+    And user has selected their default energy supplier information
     And user has entered their usage numbers "Electric kwh","2000","Gas kwh","5000"
     And user selects the "Continue" button
     And when user creates an account
@@ -45,7 +45,7 @@ Feature: Register page
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
     And user selects a supplier and tariff and payment method
-        | dual supplier | SSE              |
+      | dual supplier | SSE              |
       | dual tariff   | Standard         |
       | dual payment  | Prepayment Meter |
     And user selects the "Continue" button
@@ -76,9 +76,9 @@ Feature: Register page
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
   Scenario: User should not be able to submit the form if account holder name is less than 4 or more than 18 characters
 
+  @ready @smoketest
   Scenario: If incorrect direct debits are entered then validation message appears
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -154,8 +154,10 @@ Feature: Register page
   @ready
   Scenario: Validation messages appear on the register page if fields are left empty
 
+  @ready
   Scenario: Toggling the enter address manually link displays validation messages if left empty
 
+  @ready
   Scenario: Validation message appears if T&C's have not been checked
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -210,7 +212,7 @@ Feature: Register page
   Scenario: Entering invalid data in the register form displays validation messages
     Given I am a new user type with known postcode "Welcome!","RH12 3GU","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
-   And user has selected their default energy supplier information
+    And user has selected their default energy supplier information
     And user has entered their usage numbers "Electric kwh","2000","Gas kwh","5000"
     And user selects the "Continue" button
     And when user creates an account

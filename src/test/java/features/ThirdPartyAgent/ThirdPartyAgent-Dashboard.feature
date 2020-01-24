@@ -47,7 +47,6 @@ Feature: Dashboard - Third Party Agent
     And user validates the address "555, Oxford Road, Wales, GU307TH"
     And user selects the "Accounts" button
     And user selects the "Add an address" button
-    #And user validates the page heading "Adding another address to your account?"
     And user enters their postcode "GU307TH"
     And user selects the "Recently Moved In" type of user button
     And user selects the "Let's go" button
@@ -84,24 +83,3 @@ Feature: Dashboard - Third Party Agent
     Then address "1, Calgary Gardens, LIPHOOK, Hampshire, GU30 7TH" is "displayed"
     And selects an address "1, Calgary Gardens, LIPHOOK, Hampshire, GU30 7TH"
     And user sees the "switched" user dashboard
-    And user selects the "Log out" button
-  #@ready
-  #Scenario: Agent can search the accounts successfully
-    #Given user navigates to a council page "coffeecaravan", "Coffee Caravan Energy"
-    #Given user logs in as a "registered" user "gurdeep+assist9@migrate.co.uk","TestUser1","Login"
-    #And user searches for search term "    NE4 5ET    "
-    #Then address "65, Hamilton Place, NEWCASTLE UPON TYNE, Tyne And Wear, NE4 5ET" is "displayed"
-    #And user searches for search term "NE4 5DP"
-    #Then address "Apartment 14, Printworks, Rutherford Street, NEWCASTLE UPON TYNE, Tyne And Wear, NE4 5DP" is "displayed"
-    #And user searches for search term "NE95LL"
-    #Then address "58, Grange Terrace, Deckham, GATESHEAD, Tyne And Wear, NE9 5LL" is "displayed"
-    #And user searches for search term "NE1"
-    #Then address "37, Old Fold Road, Old Fold, GATESHEAD, Tyne And Wear, NE10 0DH" is "displayed"
-#
-   #@ready
-  #	Scenario: If agent navigates back home then selects sign up they should see the Add another address sign up page
-    #Given user navigates to a council page "coffeecaravan", "Coffee Caravan Energy"
-    #Given user logs in as a "registered" user "gurdeep+assist9@migrate.co.uk","TestUser1","Login"
-    #And user selects the "home" button
-    #Then user selects the "Get started" button
-    #Then user validates the page heading "Adding another address to your account?"

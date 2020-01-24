@@ -13,8 +13,8 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -62,10 +62,10 @@ public class LoginStep extends AbstractContext {
 		scenario.write("Finished Scenario");
 		
     	System.out.println(scenario.isFailed());
-//    	 if (scenario.isFailed()) {
-//             byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//             scenario.embed(screenshotBytes, "image/png");
-//         }
+    	 if (scenario.isFailed()) {
+             byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+             scenario.embed(screenshotBytes, "image/png");
+         }
     	 
     	 if(driver != null) {
     		 driver.quit();
@@ -347,7 +347,8 @@ public class LoginStep extends AbstractContext {
 					case "save usage":	
 		   				linkElement=getWebElementByXpath(".//div[@class='dashboard__modal-submit']//button[@class='button--primary-v3']");
 		   				Assert.assertTrue("Save usage button should be enabled", linkElement.isEnabled());
-		   				linkElement.click();	
+		   				linkElement.click();
+		   				Thread.sleep(2000);
 						break;
 						
 					case "edit preferences":			
@@ -457,7 +458,33 @@ public class LoginStep extends AbstractContext {
 						linkElement = getWebElementByXpath(".//div[@class='popup__inner']//button[@class='popup__corner-close']");
 						linkElement.click();	
 						Thread.sleep(2000);
-						break;			
+						break;		
+					
+					case "edit supply address":
+						linkElement = getWebElementByXpath(".//div[@id='select-supply-address']//following-sibling::button[1]");
+						linkElement.click();	
+						Thread.sleep(2000);
+						break;		
+						
+					case "edit second address":
+						linkElement = getWebElementByXpath(".//div[@id='select-second-address']//following-sibling::button[1]");
+						linkElement.click();	
+						Thread.sleep(5000);
+						break;		
+						
+					case "edit third address":
+						linkElement = getWebElementByXpath(".//div[@id='select-third-address']//following-sibling::button[1]");
+						linkElement.click();	
+						Thread.sleep(2000);
+						break;		
+						
+					case "edit billing address":
+						linkElement = getWebElementByXpath(".//div[@id='select-billing-address']//following-sibling::button[1]");
+						linkElement.click();	
+						Thread.sleep(2000);
+						break;		
+						
+						
 						
 					default:
 						Assert.fail("\nThe " + buttonName + " button has not been recognised");
@@ -633,21 +660,36 @@ public class LoginStep extends AbstractContext {
 					getWebElementByXpath(".//a[@class='navigation__item--green' and text()='Accounts']").click();
 					break;
 				
-				case "our mission":
-					getWebElementByXpath(".//ul[@class='navigation__items']//button[@class='navigation__item--dropdown' and text()='Our mission']").click();	
+				case "about us":
+					getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/about']").click();	
 	   				Thread.sleep(1000);
-					break;			
+					break;	
+					
+				case "fuel poverty":
+					getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/fuel-poverty']").click();	
+	   				Thread.sleep(1000);
+					break;	
 											
-				case "help":		
-	   				getWebElementByXpath(".//ul[@class='navigation__items']//button[@class='navigation__item--dropdown' and text()='Help']").click();	
+				case "faqs":		
+	   				getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/faqs']").click();	
 	   				Thread.sleep(1000);
 					break;		
+					
+				case "contact us":		
+	   				getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/contact-us']").click();	
+	   				Thread.sleep(1000);
+					break;
 					
 				case "blog":		
 	   				getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/blog']").click();	
 	   				Thread.sleep(1000);
 					break;	
 				
+				case "log in":		
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='login']");
+	   				linkElement.click();	
+					break;
+					
 				case "logout":	
 					driver.switchTo().defaultContent();
 					linkElement=getWebElementByXpath(".//button[@class='button navigation__item--green' and text()='Logout']");
@@ -727,8 +769,30 @@ public class LoginStep extends AbstractContext {
 					linkElement = getWebElementByXpath(".//button[@class='register__manual-address-toggle']");
 					linkElement.click();	
 					Thread.sleep(1000);
-					break;		
+					break;	
 				
+				case "enter your second address manually":
+				case "select your second address from the list":
+					Thread.sleep(3000);
+					linkElement = getWebElementByXpath(".//*[@id='select-second-address']//following::button[1]");
+					linkElement.click();	
+					Thread.sleep(1000);
+					break;						
+				
+				case "enter your third address manually":
+				case "select your third address from the list":
+					linkElement = getWebElementByXpath(".//div[@id='select-third-address']//following::button[1]");
+					linkElement.click();	
+					Thread.sleep(1000);
+					break;		
+								
+				case "enter your billing address manually":
+				case "select your billing address from the list":
+					linkElement = getWebElementByXpath(".//div[@id='select-billing-address']//following::button[1]");
+					linkElement.click();	
+					Thread.sleep(1000);
+					break;		
+										
 				//register page
 				case "t&cs":		
 	   				linkElement=getWebElementByXpath(".//a[@href='/terms-and-conditions']");
@@ -757,16 +821,6 @@ public class LoginStep extends AbstractContext {
 					
 				case "twitter":		
 	   				linkElement=getWebElementByXpath(".//ul[@class='refer__social-items']/li[3]");
-	   				linkElement.click();	
-					break;		
-					
-				case "sign up":	
-					linkElement=getWebElementByXpath(".//nav//div[@class='navigation__right-inner']//following-sibling::li[3]");
-	   				linkElement.click();	
-					break;		
-				
-				case "login":		
-					linkElement=getWebElementByXpath(".//nav//div[@class='navigation__right-inner']//following-sibling::li[4]");
 	   				linkElement.click();	
 					break;							
 				
@@ -1222,7 +1276,7 @@ public class LoginStep extends AbstractContext {
 	@Then("user validates the page heading {string}")
 	public void user_validates_the_page_heading(String expectedTitle) throws InterruptedException {
 		
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 		try {
 			
@@ -1878,7 +1932,7 @@ public class LoginStep extends AbstractContext {
 								case "help":
 									stringToCheck = getWebElementByXpath(".//button[@class='navigation__item--dropdown' and text()='Help']").getText().toLowerCase();
 									Assert.assertEquals("help", stringToCheck);
-									System.out.println(" Should be faqs but is "+stringToCheck);
+									System.out.println(" Should be help but is "+stringToCheck);
 									break;			
 								
 								case "blog":
@@ -2843,7 +2897,6 @@ public class LoginStep extends AbstractContext {
 					   val=val.replaceAll("^'(.*?)'$", "/�");
 				   }
 				   
-//				   WebElement formEle=null;
 		   		   Thread.sleep(2000);
 
 	    				switch(key){
@@ -2877,8 +2930,6 @@ public class LoginStep extends AbstractContext {
 		        	
 		            String key = entry.getKey();
 		            String value = entry.getValue();
-		            
-//		            WebElement formElem=null;
 			   				
 					   switch(key){
 					   
@@ -3937,7 +3988,7 @@ public class LoginStep extends AbstractContext {
 	}	
 	
 	@Given("user scrolls up")
-	protected void user_scrolls_up(){
+	public void user_scrolls_up(){
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollTo(0,0)");
@@ -4006,24 +4057,28 @@ public class LoginStep extends AbstractContext {
 			
 			switch (energyType) {
 			
+				case "electric kwh":
 				case "electric":
 					String elecUsageNumber = getWebElementByXpath(".//span[contains(text(),'Your electricity usage per year')]/following-sibling::span[@class='dashboard__usage-value']").getText();
 					Assert.assertEquals(usageNumber, elecUsageNumber);
 					System.out.println("The expected energy and usage is "+energyType +","+usageNumber);
 					break;
 					
+				case "electric day kwh":
 				case "electric day":
 					String elecDayUsageNumber = getWebElementByXpath(".//span[contains(text(),'day electricity usage per year')]/following-sibling::span[@class='dashboard__usage-value']").getText();
 					Assert.assertEquals(usageNumber, elecDayUsageNumber);
 					System.out.println("The expected energy and usage is "+energyType +","+usageNumber);
 					break;
 					
+				case "electric night kwh":
 				case "electric night":
 					String elecNightUsageNumber = getWebElementByXpath(".//span[contains(text(),'night electricity usage per year')]/following-sibling::span[@class='dashboard__usage-value']").getText();
 					Assert.assertEquals(usageNumber, elecNightUsageNumber);
 					System.out.println("The expected energy and usage is "+energyType +","+usageNumber);
 					break;
 	
+				case "gas kwh":
 				case "gas":
 					String gasUsageNumber = getWebElementByXpath(".//span[contains(text(),'gas usage per year')]/following-sibling::span[@class='dashboard__usage-value']").getText();
 					Assert.assertEquals(usageNumber, gasUsageNumber);
@@ -4194,8 +4249,6 @@ public class LoginStep extends AbstractContext {
 				break;
 			
 			case "small":
-			
-//				WebElement isActive1 = getWebElementByXpath(".//div[@class='radio__wrap active']/input[@id='small-home']");
 				
 				if(isElementPresent(By.xpath(".//div[@class='radio__wrap active']/input[@id='small-home']"))) {
 					
@@ -4226,7 +4279,6 @@ public class LoginStep extends AbstractContext {
 	@Given("user is on the register page")
 	public void user_is_on_the_register_page() throws InterruptedException {
 	
-//		user_is_navigated_to_the_page("signup/register");
 		user_validates_the_page_heading_two( "Your switch is helping raise money for people who need it");
 	   	    
 	}

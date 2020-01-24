@@ -53,7 +53,7 @@ Feature: Delayed switch
       | switch now   | Gurdeep, you're all set! | switch now | Your energy switch reference number is: | switched  |
       | switch later | Congratulations Gurdeep! | delayed    |                                         | delayed   |
 
-  @bug
+  @ready @smoketest
   Scenario Outline: DOB validation checks for a Delayed and Switch now user on the Register page
     And user selects the "Paper billing" radio button
     And user selects the "Continue" button

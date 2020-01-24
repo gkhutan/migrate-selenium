@@ -1,7 +1,5 @@
 Feature: Dashboard - No bill to hand
 
-  Background: 
-
   @ready
   Scenario: The correct Address (ee00ee), Preferences, Personal details are shown on the dashboard - no bill to hand, Electric
     Given I am a new user type with unknown postcode "Welcome!","ee00ee","No bill to hand","London","Let's go"
@@ -35,7 +33,7 @@ Feature: Dashboard - No bill to hand
     And user selects the "Sign up" button
     And user has selected confirm in the congrats popup
     And user validates the dashboard "usage" text "Your usage as estimated by us based on your current supplier and house characteristics"
-    And user validates the address "20a Preston Road, Littlemore, ee00ee"
+    And user validates the address "20a, Preston Road, Littlemore, ee00ee"
     And user selects the "Edit details" button
     And user validates their personal details
       | Title              | Mr            |
@@ -50,8 +48,8 @@ Feature: Dashboard - No bill to hand
     And user validates the dashboard "usage" text "Your usage as estimated by us based on your current supplier and house characteristics"
     And user validates the address "2, Melville Way, Goring-by-sea, WORTHING, West Sussex, BN12 6HU"
     Given user selects the "Edit Usage" button
-    And user enters their "Electric day kwh" usage numbers "2222"
-    And user enters their "Electric night kwh" usage numbers "5555"
+    And user enters their "Electric day kwh" usage numbers manually "2222"
+    And user enters their "Electric night kwh" usage numbers manually "5555"
     And user selects the "Save usage" button
     And user validates their "Electric day" usage number "2222 kWh"
     And user validates their "Electric night" usage number "5555 kWh"

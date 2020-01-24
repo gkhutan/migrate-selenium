@@ -1,6 +1,4 @@
 Feature: Results - I have a bill to hand
-
-  Background: 
   
  @ready
   Scenario Outline: Selecting the supplier options updates the metadata on the page accordingly

@@ -88,7 +88,7 @@ Feature: Dashboard - I have a bill
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready 
   Scenario: Toggling the address link to select an address from the list displays correct address on dashboard
     Given I am a new user type with known postcode "Welcome!","OX43UJ","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -124,15 +124,15 @@ Feature: Dashboard - I have a bill
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready 
   Scenario: User can edit their econ meter usage details, Preferences and Personal details and select the link for Prepayment meter
     Given user logs in as a "registered" user "elec econ pre","TestUser1","Login"
     And user validates the address "2, Melville Way, Goring-by-sea, WORTHING, West Sussex, BN12 6HU"
     Given user selects the "Edit Usage" button
     And user selects the "close dialog" button
     Given user selects the "Edit Usage" button
-    And user enters their "Electric day kwh" usage numbers "2222"
-    And user enters their "Electric night kwh" usage numbers "5555"
+    And user enters their "Electric day kwh" usage numbers manually "2222"
+    And user enters their "Electric night kwh" usage numbers manually "5555"
     And user selects the "Save usage" button
     And user validates their "Electric day" usage number "2222 kWh"
     And user validates their "Electric night" usage number "5555 kWh"
