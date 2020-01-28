@@ -6,7 +6,7 @@ Feature: Prepayment Meter
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     Given user has selected an energy type "Gas & Electric"
 
-  @ready
+  @ready @smoketest
   Scenario: Selecting the Here link in the Prepayment prompt opens a new window
   Scenario: Selecting Prepayment should hide the supplier options on the results page and hide direct debit form on register
     And user selects the "same supplier yes" radio button

@@ -1,6 +1,6 @@
 Feature: Refer a friend
 
-  @ready
+  @ready @smoketest
   Scenario Outline: User can successfully sign up using the refer a friend link
     Given user navigates to "<Email>"
     And user validates the page heading "Get switched to the cheapest energy deals every year. Automatically."

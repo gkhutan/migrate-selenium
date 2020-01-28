@@ -1,7 +1,5 @@
 Feature: Blog - Marketing pages
 
-  Background: 
-
   Scenario: Selecting the link to the Blog displays the Blog
     Given user navigates to ""
     And user selects the "Blog" link

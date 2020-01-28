@@ -2,7 +2,7 @@ Feature: Register page
   
   As an unregistered user I want to be regiter with Migrate to switch to the deal I have chosen
 
-  @ready
+  @ready @smoketest
   Scenario: I have a bill user with postcode ee00ee completing sign up with default values and viewing dashboard
     Given I am a new user type with unknown postcode "Welcome!","ee00ee","I have a bill to hand","London","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -10,7 +10,6 @@ Feature: Register page
     And user has entered their usage numbers "Electric kwh","2000","Gas kwh","5000"
     And user selects the "Continue" button
     And when user creates an account
-    And user is navigated to the "signup/register" page
     And user is on the register page
     And user selects the lived for three years field to "yes"
     And user selects the supply address same as billing address field to "yes"
@@ -40,7 +39,7 @@ Feature: Register page
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready
+  @ready @smoketest
   Scenario: I have a bill user with postcode bn126hu completing sign up with default values and viewing dashboard
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -108,7 +107,7 @@ Feature: Register page
       | sort code      |       999999 |
     Then user sees validation message for "direct debit" "Invalid account details provided."
 
-  @ready
+  @ready @smoketest
   Scenario: If correct direct debits are entered then user sees confirmation details
     Given user logs in as a "returning" user "gurdeep+dec1@migrate.co.uk","TestUser1","Login"
     And user selects the "Continue" button
@@ -124,7 +123,7 @@ Feature: Register page
     Then user validates the page text "Name of Bank/Building society: Barclays Bank PLC"
     Then user validates the page text "Address of Bank/Building society: 1 Churchill Place, London"
 
-  @ready
+  @ready @smoketest
   Scenario Outline: User should not be able to submit the form if DOB is not between 18 and 100
     Given user logs in as a "Returning" user "gurdeep+dec57@migrate.co.uk","TestUser1","Login"
     And user selects the "Continue" button
@@ -157,7 +156,7 @@ Feature: Register page
   @ready
   Scenario: Toggling the enter address manually link displays validation messages if left empty
 
-  @ready
+  @ready @smoketest
   Scenario: Validation message appears if T&C's have not been checked
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"

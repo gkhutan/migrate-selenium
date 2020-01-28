@@ -1,6 +1,6 @@
 Feature: Results - I have a bill to hand
   
- @ready
+ @ready 
   Scenario Outline: Selecting the supplier options updates the metadata on the page accordingly
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -23,7 +23,7 @@ Feature: Results - I have a bill to hand
       | Green energy | Ratings       | Top rated     |
 
 
-	@ready
+	@ready @smoketest
   Scenario: Switching to the estimator (I have a bill user) should display correct message on the results page
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     Given user has selected an energy type "Gas & Electric"

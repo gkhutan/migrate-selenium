@@ -1,5 +1,6 @@
 Feature: Forgot Password
 
+	@ready @smoketest
   Scenario: User can successfully enter their email to reset their password
     Given user navigates to "login"
     And user selects the "Cookie ok" button

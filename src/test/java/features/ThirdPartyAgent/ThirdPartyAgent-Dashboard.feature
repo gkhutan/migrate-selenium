@@ -2,7 +2,7 @@ Feature: Dashboard - Third Party Agent
 
   @ready
   Scenario: User confirms address has been added to the dashboard
-
+	@ready
   Scenario: Agent can add another address successfully
     Given user navigates to a council page "coffeecaravan", "Coffee Caravan Energy"
     Given user logs in as a "registered" user "gurdeep+assist5@migrate.co.uk","TestUser1","Login"

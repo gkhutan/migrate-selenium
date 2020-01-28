@@ -27,7 +27,7 @@ Feature: Estimator
     Then user selects the "Usage" button
     And user validates the page heading "Choose your first switch"
 
-  @ready
+  @ready @smoketest
   Scenario: Toggling between estimator and I know my numbers should remember the selection for the econ meter
     Given I am a new user type with known postcode "Welcome!","BN126HU","I have a bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"

@@ -22,7 +22,7 @@ Feature: Create an account
       | gurdeep@migrate.co.uk | TestUser1 | Migrate and do good       | Let's go          |
       | gurdeep@migrate.co.uk | TestUser2 | Let's make you an account | Inactive continue |
 
-  @ready
+  @ready @smoketest
   Scenario: Entering in incorrect email and password displays validation messages
     And user has selected an energy type "Gas & Electric"
     And user selects the "Continue" button

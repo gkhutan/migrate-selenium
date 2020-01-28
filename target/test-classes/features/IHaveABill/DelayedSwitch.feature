@@ -51,7 +51,7 @@ Feature: Delayed switch
     Examples: 
       | switch       | page heading             | popup      | page text                               | dashboard |
       | switch now   | Gurdeep, you're all set! | switch now | Your energy switch reference number is: | switched  |
-      | switch later | Congratulations Gurdeep! | delayed    |                                         | delayed   |
+      | switch later | Congratulations Gurdeep! | delayed    | So what now?                            | delayed   |
 
   @ready @smoketest
   Scenario Outline: DOB validation checks for a Delayed and Switch now user on the Register page

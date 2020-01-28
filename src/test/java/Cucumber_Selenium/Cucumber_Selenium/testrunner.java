@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 				features = "src/test/java/features",
-				tags = 	 {"@test"},
+				tags = 	 {"@smoketest"},
 				plugin = {"pretty" ,"html:target/cucumber-report"},
 				glue= 	 {"seleniumgluecode"},
 				monochrome = true,

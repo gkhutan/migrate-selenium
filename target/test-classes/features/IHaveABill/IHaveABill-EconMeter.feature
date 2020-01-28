@@ -1,6 +1,6 @@
 Feature: Economy 7 meter - I have a bill
 
-  @ready
+  @ready @smoketest
   Scenario Outline: Economy 7 meter and Prepayment meter user can successfully Sign up and view and edit their details on the Dashboard - Prepayment, Econ 7 & Electric
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user selects "<Energy Type>" energy type
@@ -53,7 +53,7 @@ Feature: Economy 7 meter - I have a bill
       | Energy Type | Econ meter     | Prepayment button          | ElecDayUsage     | DayUsage | ElecNightUsage     | NightUsage |
       | Electric    | econ meter yes | That's ok - let's continue | Electric day kwh |     2000 | Electric night kwh |       4000 |
 
-  @ready @smoketest
+  @ready
   Scenario Outline: Economy 7 meter user can successfully sign up and view and edit their details on the Dashboard - Dual
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "<Energy Type>"

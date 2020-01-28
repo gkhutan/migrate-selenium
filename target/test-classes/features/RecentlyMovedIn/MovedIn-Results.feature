@@ -1,26 +1,6 @@
 Feature: Results - Recently moved in
 
-  @ready
-  Scenario Outline: Selecting the supplier options updates the lozenge, metadata on the page accordingly
-    Given I am a new user type with known postcode "Welcome!","bn126hu","Recently Moved In","Let's go"
-    And user has selected an energy type "Gas & Electric"
-    And user selects the "econ meter yes" radio button
-    And user selects the "Continue" button
-    And user selects their estimated usage information
-      | In my house lives | My heating source is  | My energy usage is     | My insulation is |
-      | 5 People          | Economy 7 Electricity | Low user (second home) | Paper-thin       |
-    And user selects the "Usage" button
-    And user selects the "<supplier>" button
-    And user confirms the radio is selected "<radio>"
-    And user validates the metadata field "<metadata>"
-
-    Examples: 
-      | supplier     | radio         | metadata      |
-      | Green energy | Paper Billing | Paper billing |
-      | Green energy | WHD           | WHD           |
-      | Green energy | Ratings       | Top rated     |
-
-  @ready
+  @ready @smoketest
   Scenario Outline: Results should display the correct route info text for Recently Moved In routes (Start on I Just Moved in but press the Pre Payment button)
     Given I am a new user type with known postcode "Welcome!","bn126hu","No bill to hand","Let's go"
     And user has selected an energy type "Gas & Electric"
@@ -36,7 +16,7 @@ Feature: Results - Recently moved in
     Then there is at least one result displayed
     Then user sees the route info message "As you don’t have a bill to hand, we’ve assumed you’re on your supplier’s standard tariff/s to present your savings. We estimated your usage with our usage calculator."
 
-  @ready
+  @ready @smoketest
   Scenario Outline: Results should display the correct route info text for Recently Moved In routes (Start and Exit on I Just Moved In)
     Given I am a new user type with known postcode "Welcome!","bn126hu","<User>","Let's go"
     And user has selected an energy type "Electric"

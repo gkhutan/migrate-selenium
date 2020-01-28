@@ -43,7 +43,7 @@ Feature: Prepayment Meter - I have a bill to hand
       | Energy Type    | Prepayment radio     | Prepayment button          |
       | Gas & Electric | prepayment meter yes | That's ok - let's continue |
 
-  @ready
+  @ready @smoketest
   Scenario Outline: Prepayment Meter user can successfully sign up with a Prepayment meter - Electric
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user selects "<Energy Type>" energy type
@@ -85,7 +85,7 @@ Feature: Prepayment Meter - I have a bill to hand
       | Energy Type | Prepayment radio     | Prepayment button          |
       | Electric    | prepayment meter yes | That's ok - let's continue |
 
-  @ready
+  @ready @smoketest
   Scenario: Prepayment meter and Economy meter user with separate suppliers can successfully view results - Dual
     Given I am a new user type with known postcode "Welcome!","bn126hu","I have a bill to hand","Let's go"
     And user has selected an energy type "Dual"

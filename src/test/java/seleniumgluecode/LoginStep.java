@@ -240,7 +240,7 @@ public class LoginStep extends AbstractContext {
 					case "usage":  				
 		   				linkElement=getWebElementByXpath(".//button[@class='button--primary-v3']");
 		   				linkElement.click();	
-						Thread.sleep(15000);
+						Thread.sleep(20000);
 						break;
 						
 					case "continue":
@@ -323,6 +323,7 @@ public class LoginStep extends AbstractContext {
 					case "next":
 						linkElement=getWebElementByXpath(".//div[@class='modal']//button[@class='button--primary-v3']");
 						linkElement.click();
+						Thread.sleep(2000);
 						break;
 					
 					//register page
@@ -427,11 +428,24 @@ public class LoginStep extends AbstractContext {
 						linkElement.click();
 						Thread.sleep(2000);
 						break;
+						
+					//homepage section 1
+					case "let's get started 1":
+						linkElement=getWebElementByXpath(".//div[@class='advert__copy']/following-sibling::a");
+						linkElement.click();
+						Thread.sleep(2000);
+						break;
+						
+					//homepage section - help at your fingertips
+					case "let's get started 2":
+						linkElement=getWebElementByXpath(".//div[@class='help__get-started']/a");
+						linkElement.click();
+						Thread.sleep(2000);
+						break;
 		
 					case "cookie ok":		
 		   				linkElement=getWebElementByXpath(".//div[@class='cookie-banner__submit-wrap']//following::button[@class='cookie-banner__submit']");
 		   				linkElement.click();	
-//		   				Thread.sleep(1000);
 						break;
 																		
 					case "privacy cookie ok":		
@@ -445,7 +459,14 @@ public class LoginStep extends AbstractContext {
 						linkElement = getWebElementByXpath(".//li['navigation__item-wrap--desktop']/following::a[@class='button--tertiary-v3']");
 						linkElement.click();	
 						Thread.sleep(2000);
-						break;				
+						break;	
+						
+					//homepage links
+					case "see all faqs":
+						linkElement=getWebElementByXpath(".//div[@class='home-page__faqs']//a[@href='/faqs']");
+						linkElement.click();
+						Thread.sleep(2000);
+						break;
 				
 					//Home page our mission
 					case "get started now":
@@ -634,8 +655,12 @@ public class LoginStep extends AbstractContext {
 	    		WebElement linkElement = null;
 	    							
 	    	switch (linkSelected) {		
-	    		
-	    		//dashboard
+	    				    	
+				case "none":
+					System.out.println("No link to select");
+					break;
+				
+	    	//dashboard
 				case "prepayment contact us":
 					driver.findElement(By.linkText("directly")).click();
 					break;
@@ -645,48 +670,55 @@ public class LoginStep extends AbstractContext {
 					linkElement=getWebElementByXpath(".//p[@class='paragraph']/a");
 					linkElement.click();
 					break;
-				
-				//homepage links
-				case "see all faqs":
-					getWebElementByXpath(".//div[@class='home-page__faqs']//a[@href='/faqs']").click();
-					break;
 					
 				//header links- desktop
 				case "dashboard":
-					getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/dashboard']").click();
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/dashboard']");
+					linkElement.click();
 					break;
 					
 				case "accounts":
-					getWebElementByXpath(".//a[@class='navigation__item--green' and text()='Accounts']").click();
+					linkElement=getWebElementByXpath(".//a[@class='navigation__item--green' and text()='Accounts']");
+					linkElement.click();
 					break;
 				
+				case "our mission":		
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']/li/button[contains(text(),'Our mission')]");
+	   				linkElement.click();
+					break;
+					
 				case "about us":
-					getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/about']").click();	
-	   				Thread.sleep(1000);
+					linkElement=getWebElementByXpath(".//div[@class='navigation__dropdown']//li/a[@href='/about']");
+					linkElement.click();
 					break;	
 					
 				case "fuel poverty":
-					getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/fuel-poverty']").click();	
-	   				Thread.sleep(1000);
+					linkElement=getWebElementByXpath(".//div[@class='navigation__dropdown']//li/a[@href='/fuel-poverty']");	
+					linkElement.click();
 					break;	
 											
+				case "help":		
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']/li/button[contains(text(),'Help')]");	
+	   				linkElement.click();
+					break;
+					
 				case "faqs":		
-	   				getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/faqs']").click();	
-	   				Thread.sleep(1000);
+					linkElement=getWebElementByXpath(".//div[@class='navigation__dropdown']//li/a[@href='/faqs']");	
+	   				linkElement.click();
 					break;		
 					
 				case "contact us":		
-	   				getWebElementByXpath(".//ul[@class='navigation__items']//li/a[@href='/contact-us']").click();	
-	   				Thread.sleep(1000);
+	   				linkElement=getWebElementByXpath(".//div[@class='navigation__dropdown']//li/a[@href='/contact-us']");	
+	   				linkElement.click();
 					break;
 					
 				case "blog":		
-	   				getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/blog']").click();	
-	   				Thread.sleep(1000);
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/blog']");
+					linkElement.click();	
 					break;	
 				
 				case "log in":		
-					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='login']");
+					linkElement=getWebElementByXpath(".//ul[@class='navigation__items']//a[@href='/login']");
 	   				linkElement.click();	
 					break;
 					
@@ -704,34 +736,30 @@ public class LoginStep extends AbstractContext {
 					break;
 
 				//footer links- desktop
-				case "about footer":		
+				case "about us footer":		
 	   				linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/about']");
 	   				linkElement.click();	
-	   				Thread.sleep(1000);
 					break;		
 					
 				case "fuel poverty footer":		
-	   				linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/fuel-poverty']");
-	   				linkElement.click();	
-	   				Thread.sleep(1000);
+					linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/fuel-poverty']");
+					linkElement.click();
+	   				Thread.sleep(2000);
 					break;		
 					
 				case "faqs footer":		
 	   				linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/faqs']");
 	   				linkElement.click();	
-	   				Thread.sleep(1000);
 					break;		
 					
 				case "contact us footer":		
 	   				linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/contact-us']");
 	   				linkElement.click();	
-	   				Thread.sleep(1000);
 					break;		
 					
 				case "t&cs footer":		
 	   				linkElement=getWebElementByXpath(".//li[@class='footer__link']//a[@href='/terms-and-conditions']");
 	   				linkElement.click();	
-	   				Thread.sleep(1000);
 					break;		
 		
 				case "privacy policy footer":		
@@ -761,7 +789,7 @@ public class LoginStep extends AbstractContext {
 				case "linkedin footer":
 					linkElement = getWebElementByXpath(".//li[@class='footer__link--social-media']//*[@id='linked-in-footer']");
 					linkElement.click();	
-					Thread.sleep(2000);
+					Thread.sleep(5000);
 					break;		
 									
 				case "enter your address manually":
@@ -773,7 +801,7 @@ public class LoginStep extends AbstractContext {
 				
 				case "enter your second address manually":
 				case "select your second address from the list":
-					Thread.sleep(3000);
+					Thread.sleep(1000);
 					linkElement = getWebElementByXpath(".//*[@id='select-second-address']//following::button[1]");
 					linkElement.click();	
 					Thread.sleep(1000);
@@ -1239,23 +1267,32 @@ public class LoginStep extends AbstractContext {
 		}
 	}
 
+	
 	@Then("user sees the {string} supplier page")
 	public void user_sees_the_supplier_page(String typeOfUser) {
 
 		try {
 			
-			if (IHaveABillToHand.equalsIgnoreCase(typeOfUser)){	
-				Assert.assertEquals(true, isElementPresent(By.xpath(".//label[@for='dual-supplier-tariff']")));
-				System.out.println("I have a bill supplier page is displayed");
+			typeOfUser=typeOfUser.toLowerCase().trim();
 			
-				}else if(NoBillToHand.equalsIgnoreCase(typeOfUser)) {
-					Assert.assertEquals(false, isElementPresent(By.xpath(".//label[@for='dual-supplier-tariff']")));
-					System.out.println("No bill supplier page is displayed");
+			switch (typeOfUser) {
+			case "i have a bill to hand":
+				Assert.assertTrue(isElementPresent(By.xpath(".//div[@id='dual-supplier-tariff']")));
+				break;
 				
-					}else if(RecentlyMoved.equalsIgnoreCase(typeOfUser)) {
-						Assert.assertEquals(true, isElementPresent(By.name("prepayment-meter-no")));	
-							System.out.println("Recently moved in supplier page is displayed");	
-					}
+			case "no bill to hand":
+				Assert.assertEquals(false, isElementPresent(By.xpath(".//div[@id='dual-supplier-tariff']")));
+				break;
+				
+			case "recently moved in":
+				Assert.assertEquals(true, isElementPresent(By.id("prepaymentno")));	
+				break;
+
+			default:
+				Assert.fail("Option not recognised");
+				break;
+			}
+			
 		
 		}catch(Exception e) {
 			
@@ -1733,39 +1770,84 @@ public class LoginStep extends AbstractContext {
 					switch(supplierName){
 					
 						case "british gas":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='British Gas']");
-								linkElement.click();
-								System.out.println("user has selected dual supplier "+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='British Gas']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='British Gas']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);
+								
+								}
 								break;
 							
 						case "npower":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='npower']");
-								linkElement.click();
-								System.out.println("user has selected top six supplier"+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='npower']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='npower']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);
+								
+								}
 								break;
 							
 						case "e.on":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='E.ON']");
-								linkElement.click();
-								System.out.println("user has selected top six supplier "+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='E.ON']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='E.ON']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);					
+								}
 								break;
 							
 						case "scottishpower":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='ScottishPower']");
-								linkElement.click();
-								System.out.println("user has selected top six supplier "+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='ScottishPower']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='ScottishPower']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);
+								}
 								break;
 							
 						case "edf energy":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='EDF Energy']");
-								linkElement.click();
-								System.out.println("user has selected top six supplier "+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='EDF Energy']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='EDF Energy']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);
+								}
 								break;
 						
 						case "sse":
-								linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='SSE']");
-								linkElement.click();
-								System.out.println("user has selected top six supplier "+supplierName);
+							if(isElementPresent(By.xpath(".//label[@class='suppliers__supplier active']/img[@alt='SSE']"))) {
+								
+								System.out.println("Don't do anything");
+								
+								}else {
+									
+									linkElement=getWebElementByXpath(".//label[@class='suppliers__supplier']/img[@alt='SSE']");
+									linkElement.click();
+									System.out.println("user has selected dual supplier "+supplierName);
+								
+								}
 								break;
 							
 							default:
@@ -1792,44 +1874,36 @@ public class LoginStep extends AbstractContext {
 		try {
 			
 			if(!isNullOrEmpty(topSixIcon)){
-				
-				WebElement statusOfButton = null;
 				topSixIcon=topSixIcon.toLowerCase().trim();
 				
 				switch (topSixIcon) {
 				case "british gas":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='British Gas']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isEnabled());
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='British Gas']/ancestor::label[@class='suppliers__supplier active']")));
 					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 					
 				case "npower":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='npower']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isDisplayed());
-					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);	
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='npower']/ancestor::label[@class='suppliers__supplier active']")));
+					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 							
 				case "e.on":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='E.ON']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isEnabled());
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='E.ON']/ancestor::label[@class='suppliers__supplier active']")));
 					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 					
 				case "scottishpower":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='ScottishPower']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isEnabled());
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='ScottishPower']/ancestor::label[@class='suppliers__supplier active']")));
 					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 					
 				case "edf energy":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='EDF Energy']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isEnabled());
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='EDF Energy']/ancestor::label[@class='suppliers__supplier active']")));
 					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 					
 				case "sse":
-					statusOfButton = driver.findElement(By.xpath(".//img[@alt='SSE']/ancestor::label[@class='suppliers__supplier active']"));
-					Assert.assertTrue(statusOfButton.isEnabled());
+					Assert.assertTrue(isElementPresent(By.xpath(".//img[@alt='SSE']/ancestor::label[@class='suppliers__supplier active']")));
 					System.out.println(" Top 6 supplier button is enabled  "+ topSixIcon);
 					break;
 		
@@ -1948,7 +2022,7 @@ public class LoginStep extends AbstractContext {
 									break;			
 									
 								case "log in":
-									stringToCheck = getWebElementByXpath(".//button[@class='button navigation__item--green' and text()='Login']").getText().toLowerCase();
+									stringToCheck = getWebElementByXpath(".//a[@class='navigation__item--green' and text()='Log in']").getText().toLowerCase();
 									Assert.assertEquals("log in",stringToCheck);
 									System.out.println(" Should be log in but is "+stringToCheck);
 									break;			
@@ -1974,8 +2048,8 @@ public class LoginStep extends AbstractContext {
 									
 								case "faqs footer":
 									stringToCheck = getWebElementByXpath(".//li[@class='footer__link']//a[@href='/faqs']").getText().toLowerCase();
-									Assert.assertEquals("f&qs", stringToCheck);
-									System.out.println(" Should be f&qs but is "+stringToCheck);
+									Assert.assertEquals("faqs", stringToCheck);
+									System.out.println(" Should be faqs but is "+stringToCheck);
 									break;	
 									
 								case "contact us footer":
@@ -2371,7 +2445,7 @@ public class LoginStep extends AbstractContext {
 				break;
 			
 			case "linkedin":
-				Assert.assertEquals("https://www.linkedin.com/company/migrate-energy/", driver.getCurrentUrl());
+				Assert.assertEquals("https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEeYiUqxgAqHwAAAW_Xz5BwpvX3mf4OsHMjSJlYBzXAxpVR2w-Pe6LvuLFkZ8rf3fPNC-NXlh0MEKczF5wwUIRHjSr_xwaGkW6A7cGpJQXglnuJh5CtqRaVrnHd-enfKxGGpHw=&originalReferer=https://rewriteuat.migrate.co.uk/fuel-poverty&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmigrate-energy%2F", driver.getCurrentUrl());
 				break;
 			
 			case "facebook icon":
@@ -2515,25 +2589,25 @@ public class LoginStep extends AbstractContext {
 					   		case "In my house lives":
 					   			driver.findElement(By.id("occupants")).click();	
 					   			they_enter_their_details(value);
-					   			Thread.sleep(1000);
+					   			Thread.sleep(2000);
 					   			break;
 					   			
 					   		case "My energy usage is":
 			   					driver.findElement(By.id("energy-usage")).click();	
 			   					they_enter_their_details(value);
-					   			Thread.sleep(1000);
+					   			Thread.sleep(2000);
 					   			break;
 					   			
 					   		case "My insulation is":
 					   			driver.findElement(By.id("insulation")).click();	
 					   			they_enter_their_details(value);
-					   			Thread.sleep(1000);
+					   			Thread.sleep(2000);
 					   			break;
 					   			
 					   		case "My heating source is":
 						   		driver.findElement(By.id("heating-source")).click();	
 						   		they_enter_their_details(value);
-					   			Thread.sleep(1000);
+					   			Thread.sleep(2000);
 						   		break;
 							   	 
 						   		default:
@@ -3692,6 +3766,7 @@ public class LoginStep extends AbstractContext {
 		case "delayed":
 		case "prepayment":
 		case "prepayment meter":
+		case "missing payment type":
 			WebElement delayedPrompt = getWebElementByXpath(".//div[@class='modal']");
 			Assert.assertTrue("The delayed switch prompt is displayed", delayedPrompt.isDisplayed());
 			break;
@@ -3829,6 +3904,7 @@ public class LoginStep extends AbstractContext {
 		}
 
 		// Perform the actions on new window
+		Thread.sleep(2000);
 		  user_validates_the_URL(url);
 
 
@@ -4665,8 +4741,24 @@ public class LoginStep extends AbstractContext {
 	@Then("user sees the route info message {string}")
 	public void user_sees_the_route_info_message(String routeInfoText) {
 	    
-		String actualRouteInfo = driver.findElement(By.xpath(".//p[@class='results__nobill-disclaimer']")).getText();
-		Assert.assertEquals(routeInfoText, actualRouteInfo);
+		try {
+			
+			if(routeInfoText.equalsIgnoreCase("None")) {
+				
+				Assert.assertFalse(isElementPresent(By.xpath(".//p[@class='results__nobill-disclaimer']")));
+				System.out.println("No message should be displayed");
+			
+			}else {
+				
+				String actualRouteInfo = driver.findElement(By.xpath(".//p[@class='results__nobill-disclaimer']")).getText();
+				Assert.assertEquals(routeInfoText, actualRouteInfo);
+			}
+		
+		}catch(Exception e) {
+			
+			Assert.fail("Element not recognised");
+		}
+		
 	}
 
 	
