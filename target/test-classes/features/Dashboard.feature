@@ -54,7 +54,7 @@ Feature: Dashboard
       | elec                 | 4, Melville Way, Goring-by-sea, WORTHING, West Sussex, BN12 6HU |
       | test unknown address | test name, test address, sw14pa                                 |
 
-  @ready 
+  @ready
   Scenario: Entering usage numbers and personal details incorrecly displays validation messages - dual, econ 7
     Given user logs in as a "registered" user "dual econ","TestUser1","Login"
     Given user selects the "Edit Usage" button
@@ -95,7 +95,7 @@ Feature: Dashboard
     And user selects the "Log out" button
     And user validates the home page heading
 
-	@ready
+  @ready
   Scenario: Editing usage numbers and personal details incorrecly displays validation messages - elec
     Given user logs in as a "registered" user "elec","TestUser1","Login"
     Given user selects the "Edit Usage" button

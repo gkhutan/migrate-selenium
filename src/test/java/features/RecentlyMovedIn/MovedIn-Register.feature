@@ -185,7 +185,7 @@ Feature: Register - Recently Moved In
     And user selects the "Log out" button
     And user validates the home page heading
 
-  @ready @test
+  @ready
   Scenario: A returning user starts again in the same session with an unknown postcode and successfully sign up and view dashboard
     Given I am a new user type with known postcode "Welcome!","bn126hu","Recently Moved In","Let's go"
     And user has selected an energy type "Gas & Electric"
