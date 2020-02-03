@@ -2,7 +2,7 @@ Feature: Login
   
   As a new user I want to be able to login successfully
   
-  @ready @smoketest
+  @ready @smoketest @test
   Scenario: Logging in successfully as a returning user
     Given user logs in as a "Returning" user "returning","TestUser1","Login"
     And user validates the page heading "Choose your first switch"
